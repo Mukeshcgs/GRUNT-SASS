@@ -22,9 +22,13 @@ module.exports = function(grunt) {
         },
         sass: {
             dist: {
-                files: {
-                    'dest/css/bootstrap.css': 'src/sass/*.scss'
-                }
+                files: [{
+                    expand: true,
+                    cwd: 'src/sass',
+                    src: ['*.scss'],
+                    dest: 'dest/css/',
+                    ext: '.css'
+                }]
             }
         },
         concat: {
@@ -88,22 +92,22 @@ module.exports = function(grunt) {
             my_target: {
                 files: [{
                     expand: true,
-                    cwd: 'src/css/',
-                    src: ['*.css', '*.min.css'],
+                    cwd: 'dest/css/',
+                    src: ['*.css', '!*.min.css'],
                     dest: 'dest/css/',
                     ext: '.min.css'
                 }]
             },
-            deps: {
+            /*deps: {
                 files: {
                     'dest/css/deps.min.css': [
                         'libs/bxslider-4/dist/jquery.bxslider.css',
                         'libs/jpreloader/jpreloader.css',
                     ]
                 }
-            }
+            }*/
         },
-		browserSync: {
+        browserSync: {
 
             dev: {
 

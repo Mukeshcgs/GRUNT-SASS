@@ -1,3 +1,3 @@
-Full web page HTML markup process recorded in video
+Full Bootstrap SASS process. 
 ==============
 
