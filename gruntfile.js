@@ -107,18 +107,26 @@ module.exports = function(grunt) {
                 }
             }*/
         },
+            webfont: {
+                icons: {
+                    src: 'src/icons/*.svg',
+                    dest: 'dest/fonts',
+                    options: {
+                        syntax: 'bem',
+                        templateOptions: {
+                            baseClass: 'glyph-icon',
+                            classPrefix: 'glyph_',
+                            mixinPrefix: 'glyph-'
+                        }
+                    }
+                }
+            },
         browserSync: {
-
             dev: {
-
                 bsFiles: {
-
-                    src: [
-                        'dest/css/*.css', 'dest/*.html'
-                    ]
+                    src: ['dest/css/*.css', 'dest/*.html']
                 },
                 options: {
-
                     watchTask: true,
                     server: './dest'
                 }
