@@ -2,82 +2,89 @@ module.exports = function(grunt) {
     // load all grunt tasks matching the ['grunt-*', '@*/grunt-*'] patterns
     require('load-grunt-tasks')(grunt);
     grunt.initConfig({
-        pkg: grunt.file.readJSON('package.json'),
-        uncss: {
-            dist: {
-                files: {
-                    'dest/css/style.min.css': ['index.html']
+            pkg: grunt.file.readJSON('package.json'),
+            uncss: {
+                dist: {
+                    files: {
+                        'dest/css/style.min.css': ['index.html']
+                    }
                 }
-            }
-        },
-        watch: {
+            },
+            watch: {
+                sass: {
+                    files: ['src/sass/**/*.scss'],
+                    tasks: ['sass', 'cssmin'],
+                },
+                libs: {
+                    files: ['libs/**/*.css'],
+                    tasks: ['cssmin'],
+                },
+                scripts: {
+                    files: ['src/js/*.js', 'lib/**/*.js'],
+                    tasks: ['concat', 'uglify'],
+                }
+            },
             sass: {
-                files: ['src/sass/**/*.scss'],
-                tasks: ['sass', 'cssmin'],
-            },
-            libs: {
-                files: ['libs/**/*.css'],
-                tasks: ['cssmin'],
-            }
-        },
-        sass: {
-            dist: {
-                files: [{
-                    expand: true,
-                    cwd: 'src/sass',
-                    src: ['*.scss'],
-                    dest: 'dest/css/',
-                    ext: '.css'
-                }]
-            }
-        },
-        concat: {
-            options: {
-                seperator: "\n\n",
-                stripeBanners: true,
-                banner: '/*!<%= pkg.name %> - v<%= pkg.version %> - ' + ' <%= grunt.template.today("yyyy-mm-dd") %> */',
-            },
-            dist: {
-                src: ['src/js/**/*js'],
-                dest: 'dest/js/<%= pkg.name %>.min.js',
-            },
-            deps: {
-                src: [
-                    'libs/jquery/dist/jquery.js',
-                    'libs/modernizr/modernizr.js',
-                    'libs/bootstrap/dist/js/bootstrap.js',
-                    'libs/angularjs/angular.min.js',
-                    'libs/bxslider-4/dist/jquery.bxslider.js',
-                    'libs/jpreloader/jpreloader.js',
-                ],
-                dest: 'dest/js/<%= pkg.name %>-deps.js'
-            },
-            move: {
-                src: ['libs/angularjs/angular.min.js.map'],
-                dest: 'dest/js/angular.min.js.map'
-            }
-        },
-
-        uglify: {
-            options: {
-                manage: false
-                    /*For presreve comments i minified file
-                    presrevedComents:'all'
-                    */
-            },
-            my_target: {
-                files: [{
+                dist: {
+                    files: [{
                         expand: true,
-                        cwd: 'js/',
-                        src: ['*.js', '*.min.js'],
-                        dest: 'js/',
-                        ext: '.min.js'
+                        cwd: 'src/sass',
+                        src: ['*.scss'],
+                        dest: 'dest/css/',
+                        ext: '.css'
                     }]
-                    /*
-                    This is for Combineing files 
-                    files:[{'js/main.min.js':['js/file-1.js', 'js/file-2.js','js/file-3.js']}]
-                */
-            }
+                }
+            },
+            concat: {
+                options: {
+                    seperator: "\n\n",
+                    sourceMap: true,
+                    stripeBanners: true,
+                    banner: '/*!<%= pkg.name %> - v<%= pkg.version %> - ' + ' <%= grunt.template.today("yyyy-mm-dd") %> */',
+                },
+                dist: {
+                    src: ['src/js/bootstrap/*js'],
+                    dest: 'dest/js/bootstrap.js',
+                },
+                deps: {
+                    src: [
+                        'libs/jquery/dist/jquery.js',
+                        'libs/modernizr/modernizr.js',
+                        'libs/jquery-ui/jquery-ui.min.js',
+                        'src/js/script.js',
+                    ],
+                    dest: 'dest/js/app-deps.js'
+                },
+                // move: {
+                //     src: ['libs/angularjs/angular.min.js.map'],
+                //     dest: 'dest/js/angular.min.js.map'
+                // }
+            },
+            uglify: {
+                options: {
+                    manage: false,
+                    /*For presreve comments i minified file*/
+                    preserveComments: 'all'
+                },
+                // Following task will take all the js in "dest/js" folder and combine in one minifyed js
+                minify_all_js: {
+                    files: {
+                        'dest/js/app.min.js': ['dest/js/bootstrap.js', 'dest/js/app-deps.js']
+                    }
+                },
+                /* Following task make all js minified but not combine in one file
+                my_target2: {
+                    files: [{
+                            expand: true,
+                            cwd: 'dest/js/',
+                            src: ['*.js', '*.min.js'],
+                            dest: 'dest/js/',
+                            ext: '.min.js'
+                        }]
+                                         This is for Combineing files 
+                        files:[{'js/main.min.js':['js/file-1.js', 'js/file-2.js','js/file-3.js']}]
+                }
+                    */
         },
         iconfont: {
             options: {
@@ -97,7 +104,7 @@ module.exports = function(grunt) {
                     dest: 'dest/css/',
                     ext: '.min.css'
                 }]
-            },
+            }
             /*deps: {
                 files: {
                     'dest/css/deps.min.css': [
@@ -107,20 +114,20 @@ module.exports = function(grunt) {
                 }
             }*/
         },
-            webfont: {
-                icons: {
-                    src: 'src/icons/*.svg',
-                    dest: 'dest/fonts',
-                    options: {
-                        syntax: 'bem',
-                        templateOptions: {
-                            baseClass: 'glyph-icon',
-                            classPrefix: 'glyph_',
-                            mixinPrefix: 'glyph-'
-                        }
+        webfont: {
+            icons: {
+                src: 'src/icons/*.svg',
+                dest: 'dest/fonts',
+                options: {
+                    syntax: 'bem',
+                    templateOptions: {
+                        baseClass: 'glyph-icon',
+                        classPrefix: 'glyph_',
+                        mixinPrefix: 'glyph-'
                     }
                 }
-            },
+            }
+        },
         browserSync: {
             dev: {
                 bsFiles: {
@@ -131,7 +138,7 @@ module.exports = function(grunt) {
                     server: './dest'
                 }
             }
-        }
+        },
     });
-    grunt.registerTask('default', ['browserSync', 'watch']);
+grunt.registerTask('default', ['browserSync', 'watch']);
 };
