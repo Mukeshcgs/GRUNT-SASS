@@ -2,8 +2,18 @@ module.exports = function(grunt) {
     // load all grunt tasks matching the ['grunt-*', '@*/grunt-*'] patterns
     require('load-grunt-tasks')(grunt);
     grunt.initConfig({
-            pkg: grunt.file.readJSON('package.json'),
-            uncss: {
+        pkg: grunt.file.readJSON('package.json'),
+        imagemin: {
+            dynamic: {
+                files: [{
+                    expand: true, // Enable dynamic expansion 
+                    cwd: 'src/images/', // Src matches are relative to this path 
+                    src: ['*{ jpg, gif, png,}'], // Actual patterns to match 
+                    dest: 'dest/images/' // Destination path prefix 
+                }]
+            }
+        },
+        uncss: {
                 dist: {
                     files: {
                         'dest/css/style.min.css': ['index.html']
@@ -33,6 +43,25 @@ module.exports = function(grunt) {
                         dest: 'dest/css/',
                         ext: '.css'
                     }]
+                }
+            },
+            cssmin: {
+                my_target: {
+                    files: [{
+                        expand: true,
+                        cwd: 'dest/css/',
+                        src: ['*.css', '!*.min.css'],
+                        dest: 'dest/css/',
+                        ext: '.min.css'
+                    }]
+                },
+                deps: {
+                    src: [
+                        'libs/jquery-ui/themes/base/core.css',
+                        'libs/jquery-ui/themes/base/datepicker.css',
+                        ],
+                    dest:'dest/css/app-deps.css'
+
                 }
             },
             concat: {
@@ -86,34 +115,7 @@ module.exports = function(grunt) {
                 }
                     */
         },
-        iconfont: {
-            options: {
-                fontName: "my-font-name"
-            },
-            your_target: {
-                src: 'glyphs/*.svg',
-                dest: 'font/'
-            }
-        },
-        cssmin: {
-            my_target: {
-                files: [{
-                    expand: true,
-                    cwd: 'dest/css/',
-                    src: ['*.css', '!*.min.css'],
-                    dest: 'dest/css/',
-                    ext: '.min.css'
-                }]
-            }
-            /*deps: {
-                files: {
-                    'dest/css/deps.min.css': [
-                        'libs/bxslider-4/dist/jquery.bxslider.css',
-                        'libs/jpreloader/jpreloader.css',
-                    ]
-                }
-            }*/
-        },
+        
         webfont: {
             icons: {
                 src: 'src/icons/*.svg',

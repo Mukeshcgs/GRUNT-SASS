@@ -9,7 +9,7 @@
  * http://api.jqueryui.com/datepicker/#theming
  */
 .ui-datepicker {
-	width: 17em;
+	width: 10em;
 	padding: .2em .2em 0;
 	display: none;
 }
@@ -77,12 +77,13 @@
 .ui-datepicker td {
 	border: 0;
 	padding: 1px;
+	background:#ccc; 
 }
 .ui-datepicker td span,
 .ui-datepicker td a {
 	display: block;
 	padding: .2em;
-	text-align: right;
+	text-align: center;
 	text-decoration: none;
 }
 .ui-datepicker .ui-datepicker-buttonpane {

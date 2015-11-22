@@ -1,4 +1,4 @@
-/*!TripNavigator - v0.0.1 -  2015-11-20 *//*!
+/*!TripNavigator - v0.0.1 -  2015-11-22 *//*!
  * jQuery JavaScript Library v2.1.4
  * http://jquery.com/
  *
