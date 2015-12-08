@@ -1,10 +1,31 @@
 // Landing page main search
-
-.filter-container{
-    .filter{
-        height:200px;
-        background:#ffffff;
-        text-align:center;
-        
+.filter-container {
+    .filter {
+        height: 200px;
+        background: #ffffff;
+        text-align: center;
+        -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.25);
+        -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.25);
+        box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.25);
+        margin-top: 200px;
+        display: block;
+        &:hover {
+            background: #CF0003;
+            color: #ffffff;
+        }
+    }
+    .popup {
+        display:none;
+        position: absolute;
+        z-index: 12;
+        bottom: 50%;
+        height: 200px;
+        background: #ffffff;
+        text-align: center;
+        -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.25);
+        -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.25);
+        box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.25);
+        margin-bottom: 10px;
+        width: 100%;
     }
 }

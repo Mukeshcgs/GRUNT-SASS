@@ -14,7 +14,7 @@
 }
 .ui-slider .ui-slider-handle {
 	position: absolute;
-	z-index: 2;
+	z-index: 22;
 	width: 1.2em;
 	height: 1.2em;
 	cursor: default;
@@ -23,7 +23,7 @@
 }
 .ui-slider .ui-slider-range {
 	position: absolute;
-	z-index: 1;
+	z-index: 5;
 	font-size: .7em;
 	display: block;
 	border: 0;
@@ -72,4 +72,62 @@
 }
 .ui-slider-vertical .ui-slider-range-max {
 	top: 0;
+}
+.ui-widget-header {
+    border: 0px solid #e78f08;
+    background:none;
+	color: #656565;
+}
+.ui-widget-header a {
+    color: #656565;
+}
+.ui-datepicker table {
+    font-size: ; 
+ }
+ .ui-datepicker td {
+    border: 0px;
+    padding: 0px;
+}
+.ui-datepicker {
+    width: 17em;
+    padding: 0px 0px 0px;
+    display: none;
+}
+
+#budget .ui-state-default, #budget .ui-widget-content .ui-state-default, #budget .ui-widget-header .ui-state-default {
+	border-style: solid;
+	border-width: 1px;
+	border-color: rgb( 255, 255, 255 );
+	border-radius: 50%;
+	border-radius: 50%;
+-moz-border-radius: 50%;
+-webkit-border-radius: 50%;
+
+border: 0px solid #000000;
+background: rgba(254,97,0,1);
+background: -moz-linear-gradient(top, rgba(254,97,0,1) 0%, rgba(177,0,0,1) 100%);
+background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(254,97,0,1)), color-stop(100%, rgba(177,0,0,1)));
+background: -webkit-linear-gradient(top, rgba(254,97,0,1) 0%, rgba(177,0,0,1) 100%);
+background: -o-linear-gradient(top, rgba(254,97,0,1) 0%, rgba(177,0,0,1) 100%);
+background: -ms-linear-gradient(top, rgba(254,97,0,1) 0%, rgba(177,0,0,1) 100%);
+background: linear-gradient(to bottom, rgba(254,97,0,1) 0%, rgba(177,0,0,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fe6100', endColorstr='#b10000', GradientType=0 );
+overflow:hidden;
+}
+#budget .ui-widget-header {
+  background-color: #b10008;
+}
+#budget .ui-slider-horizontal .ui-slider-handle {
+    top: -0.8em;
+    margin-left: -.6em;
+}
+
+#budget .ui-slider .ui-slider-handle {
+    position: absolute;
+    z-index: 2;
+    width: 2.2em;
+    height: 2.2em;
+    cursor: default;
+    -ms-touch-action: none;
+    touch-action: none;
 }

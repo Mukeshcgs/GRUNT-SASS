@@ -58,7 +58,10 @@ module.exports = function(grunt) {
                 deps: {
                     src: [
                         'libs/jquery-ui/themes/base/core.css',
+                        'libs/jquery-ui/themes/base/widget.css',
+                        'libs/jquery-ui/themes/base/mouse.css',
                         'libs/jquery-ui/themes/base/datepicker.css',
+                        'libs/jquery-ui/themes/base/slider.css',
                         ],
                     dest:'dest/css/app-deps.css'
 
@@ -79,7 +82,12 @@ module.exports = function(grunt) {
                     src: [
                         'libs/jquery/dist/jquery.js',
                         'libs/modernizr/modernizr.js',
-                        'libs/jquery-ui/jquery-ui.min.js',
+                        'libs/jquery-ui/ui/core.js',
+                        'libs/jquery-ui/ui/widget.js',
+                        'libs/jquery-ui/ui/mouse.js',
+                        'libs/jquery-ui/ui/position.js',
+                        'libs/jquery-ui/ui/datepicker.js',
+                        'libs/jquery-ui/ui/slider.js',
                         'src/js/script.js',
                     ],
                     dest: 'dest/js/app-deps.js'
@@ -92,6 +100,8 @@ module.exports = function(grunt) {
             uglify: {
                 options: {
                     manage: false,
+                    sourceMap : true,
+                    sourceMapIncludeSources : true,
                     /*For presreve comments i minified file*/
                     preserveComments: 'all'
                 },
