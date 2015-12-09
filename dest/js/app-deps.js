@@ -15241,7 +15241,22 @@ $(document).ready(function() {
             $('#z').datepicker('setDate', $(this).val());
         });*/
     });
+    $(function() {
+        $(window).scroll(function() {
+            // set distance user needs to scroll before we fadeIn navbar 
+            var scrollHeight = $(window).height();
+            if ($(this).scrollTop() > scrollHeight) {
+                //$('.sticky-nav').fadeIn();
+                $('.sticky-nav').addClass('navbar-fixed-top');
+            } else {
+                $('.sticky-nav').removeClass('navbar-fixed-top');
+                //$('.sticky-nav').fadeOut();
 
+
+            }
+        });
+
+    });
 });
 
 //# sourceMappingURL=app-deps.js.map

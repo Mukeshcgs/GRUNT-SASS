@@ -5058,7 +5058,8 @@ button.close {
     color: #878787; }
     .top-header-contact a:hover {
       color: #ffffff;
-      text-decoration: none; }
+      text-decoration: none;
+      cursor: pointer; }
   .top-header-contact i {
     margin-right: 5px;
     margin-left: 15px; }
