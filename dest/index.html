@@ -10,7 +10,7 @@
     <link rel="icon" href="images/favicon.ico">
     <title>Trip Navigatore1</title>
     <link href="css/bootstrap.css" rel="stylesheet">
-    <link href="fonts/icons.css" rel="stylesheet">
+    <link href="icon-font/icons.css" rel="stylesheet">
     <link href="css/app-deps.css" rel="stylesheet">
     <!-- Bootstrap theme -->
     <!-- <link href="css/bootstrap-theme.css" rel="stylesheet"> -->
@@ -29,10 +29,23 @@
 </head>
 
 <body role="document">
+    <!-- top-contact-bar -->
+    <div class="top-header-contact">
+        <div class="container">
+            <a href=""><i class="glyphicon glyphicon-earphone"></i>+91 123456789</a>
+            <a href=""><i class="glyphicon glyphicon-envelope"></i>info@tripnavigator.com</a>
+        </div>
+    </div>
+    <!-- top-header-bar -->
+    <div class "top-header">
+    </div>
     <!-- Fixed navbar -->
     <div class="navbar navbar-default" role="navigation">
-        <div class="container">
-            <div class="navbar-header">
+        <div class="container text-right">
+            <span class="main-logo"><a class="" href="#"><img src="images/main-logo.png" /></a></span>
+            <button type="button" class="btn btn-sm btn-primary">REGISTER</button>
+            <button type="button" class="btn btn-sm btn-info">LOGIN</button>
+            <!--<div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                     <span class="sr-only">Toggle navigation</span>
                     <span class="icon-bar"></span>
@@ -57,9 +70,9 @@
                             <li><a href="#">Separated link</a></li>
                             <li><a href="#">One more separated link</a></li>
                         </ul>
-                    </li> -->
+                    </li> 
                 </ul>
-            </div>
+            </div>-->
             <!--/.nav-collapse -->
         </div>
     </div>
@@ -70,32 +83,32 @@
         </div>
     </div>
     <!-- -->
-    <div class="container" role="main">
-        <!-- main search -->
-        <div class="row filter-container">
+    <!-- main search -->
+    <div class="main-bg">
+        <div class="row filter-container ">
             <!-- budget filter -->
             <div class="col-md-2">
                 <div class="filter" id="budget">
+                    <!-- RANGE POPUP -->
                     <div class="popup">
-                        <div id="slider-vertical" style="height:200px;"></div>
+                        <div id="slider-vertical" style="height:100%;    margin: 0 auto;"></div>
                     </div>
                     <div>
-                        <label for="amount">INR:</label>
                         <input type="text" id="amount" readonly style="border:0; color:#f6931f; font-weight:bold; width:100%;text-align:center;    background: transparent;">
                     </div>
-                    <div><i class="glyph-icon glyph_dinner"></i></div>
-                    <div>
-                        <input type="hidden" id="datepicker">BUDGET</div>
+                    <div class="filter-icon"><i class="trp-3x trp-icon trp-money510"></i></div>
+                    <div class="filter-arrow"><i class="trp-icon trp-direction306"></i></div>
+                    <div>BUDGET</div>
                 </div>
             </div>
             <!-- region filter -->
             <div class="col-md-2">
                 <div class="filter" id="region">
                     <div class="popup">
-                        <div id="slider-vertical" style="height:200px;"></div>
+                        <div id="slider-vertical"></div>
                     </div>
-                    <div>INR : 65 - 82</div>
-                    <div><i class="glyph-icon glyph_dinner"></i></div>
+                    <div class="filter-icon"><i class="trp-3x trp-icon trp-money510"></i></div>
+                    <div class="filter-arrow"><i class="trp-icon trp-direction306"></i></div>
                     <div>REGION</div>
                 </div>
             </div>
@@ -103,10 +116,10 @@
             <div class="col-md-2">
                 <div class="filter" id="theme">
                     <div class="popup">
-                        <div id="slider-vertical" style="height:200px;"></div>
+                        <div id=""></div>
                     </div>
-                    <div>INR : 65 - 82</div>
-                    <div><i class="glyph-icon glyph_dinner"></i></div>
+                    <div class="filter-icon"><i class="trp-3x trp-icon trp-alphabet14"></i></div>
+                    <div class="filter-arrow"><i class="trp-icon trp-direction306"></i></div>
                     <div>THEME</div>
                 </div>
             </div>
@@ -114,10 +127,11 @@
             <div class="col-md-2">
                 <div class="filter" id="date">
                     <div class="popup">
-                        <div id="slider-vertical" style="height:200px;"></div>
+                        <input type="hidden" id="date-input" />
+                        <div id="datepicker"></div>
                     </div>
-                    <div>INR : 65 - 82</div>
-                    <div><i class="glyph-icon glyph_dinner"></i></div>
+                    <div class="filter-icon"><i class="trp-3x trp-icon trp-alphabet14"></i></div>
+                    <div class="filter-arrow"><i class="trp-icon trp-direction306"></i></div>
                     <div>DATE</div>
                 </div>
             </div>
@@ -125,199 +139,67 @@
             <div class="col-md-2">
                 <div class="filter" id="people">
                     <div class="popup">
-                        <div id="slider-vertical" style="height:200px;"></div>
+                        <div id="slider-vertical"></div>
                     </div>
-                    <div>INR : 65 - 82</div>
-                    <div><i class="glyph-icon glyph_dinner"></i></div>
+                    <div class="filter-icon"><i class="trp-3x trp-icon trp-profile17"></i></div>
+                    <div class="filter-arrow"><i class="trp-icon trp-direction306"></i></div>
                     <div>PEOPLE</div>
                 </div>
             </div>
             <!-- search-button filter -->
             <div class="col-md-2">
                 <div class="filter" id="search">
-                    <div>INR : 65 - 82</div>
-                    <div><i class="glyph-icon glyph_dinner"></i></div>
+                    <div class="filter-icon"><i class="trp-3x trp-icon trp-loupe11"></i></div>
+                    <div class="filter-arrow"><i class="trp-icon "></i></div>
                     <div>SEARCH</div>
                 </div>
             </div>
         </div>
-        <div class="page-header">
-            <h1>Buttons</h1>
-        </div>
-        <p>
-            <button type="button" class="btn btn-lg btn-default">Default</button>
-            <button type="button" class="btn btn-lg btn-primary">Primary</button>
-            <button type="button" class="btn btn-lg btn-success">Success</button>
-            <button type="button" class="btn btn-lg btn-info">Info</button>
-            <button type="button" class="btn btn-lg btn-warning">Warning</button>
-            <button type="button" class="btn btn-lg btn-danger">Danger</button>
-            <button type="button" class="btn btn-lg btn-link">Link</button>
-        </p>
-        <p>
-            <button type="button" class="btn btn-default">Default</button>
-            <button type="button" class="btn btn-primary">Primary</button>
-            <button type="button" class="btn btn-success">Success</button>
-            <button type="button" class="btn btn-info">Info</button>
-            <button type="button" class="btn btn-warning">Warning</button>
-            <button type="button" class="btn btn-danger">Danger</button>
-            <button type="button" class="btn btn-link">Link</button>
-        </p>
-        <p>
-            <button type="button" class="btn btn-sm btn-default">Default</button>
-            <button type="button" class="btn btn-sm btn-primary">Primary</button>
-            <button type="button" class="btn btn-sm btn-success">Success</button>
-            <button type="button" class="btn btn-sm btn-info">Info</button>
-            <button type="button" class="btn btn-sm btn-warning">Warning</button>
-            <button type="button" class="btn btn-sm btn-danger">Danger</button>
-            <button type="button" class="btn btn-sm btn-link">Link</button>
-        </p>
-        <p>
-            <button type="button" class="btn btn-xs btn-default">Default</button>
-            <button type="button" class="btn btn-xs btn-primary">Primary</button>
-            <button type="button" class="btn btn-xs btn-success">Success</button>
-            <button type="button" class="btn btn-xs btn-info">Info</button>
-            <button type="button" class="btn btn-xs btn-warning">Warning</button>
-            <button type="button" class="btn btn-xs btn-danger">Danger</button>
-            <button type="button" class="btn btn-xs btn-link">Link</button>
-        </p>
-        <div class="page-header">
-            <h1>Tables</h1>
-        </div>
-        <div class="row">
-            <div class="col-md-6">
-                <table class="table">
-                    <thead>
-                        <tr>
-                            <th>#</th>
-                            <th>First Name</th>
-                            <th>Last Name</th>
-                            <th>Username</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>1</td>
-                            <td>Mark</td>
-                            <td>Otto</td>
-                            <td>@mdo</td>
-                        </tr>
-                        <tr>
-                            <td>2</td>
-                            <td>Jacob</td>
-                            <td>Thornton</td>
-                            <td>@fat</td>
-                        </tr>
-                        <tr>
-                            <td>3</td>
-                            <td>Larry</td>
-                            <td>the Bird</td>
-                            <td>@twitter</td>
-                        </tr>
-                    </tbody>
-                </table>
+    </div>
+    <div class="navbar navbar-default">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="" href="#"><img src="images/main-logo.png" /></a>
             </div>
-            <div class="col-md-6">
-                <table class="table table-striped">
-                    <thead>
-                        <tr>
-                            <th>#</th>
-                            <th>First Name</th>
-                            <th>Last Name</th>
-                            <th>Username</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>1</td>
-                            <td>Mark</td>
-                            <td>Otto</td>
-                            <td>@mdo</td>
-                        </tr>
-                        <tr>
-                            <td>2</td>
-                            <td>Jacob</td>
-                            <td>Thornton</td>
-                            <td>@fat</td>
-                        </tr>
-                        <tr>
-                            <td>3</td>
-                            <td>Larry</td>
-                            <td>the Bird</td>
-                            <td>@twitter</td>
-                        </tr>
-                    </tbody>
-                </table>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="#">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <span class="caret"></span></a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="#">Action</a></li>
+                            <li><a href="#">Another action</a></li>
+                            <li><a href="#">Something else here</a></li>
+                            <li class="divider"></li>
+                            <li class="dropdown-header">Nav header</li>
+                            <li><a href="#">Separated link</a></li>
+                            <li><a href="#">One more separated link</a></li>
+                        </ul>
+                    </li>
+                </ul>
             </div>
+            <!--/.nav-collapse -->
         </div>
-        <div class="row">
-            <div class="col-md-6">
-                <table class="table table-bordered">
-                    <thead>
-                        <tr>
-                            <th>#</th>
-                            <th>First Name</th>
-                            <th>Last Name</th>
-                            <th>Username</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td rowspan="2">1</td>
-                            <td>Mark</td>
-                            <td>Otto</td>
-                            <td>@mdo</td>
-                        </tr>
-                        <tr>
-                            <td>Mark</td>
-                            <td>Otto</td>
-                            <td>@TwBootstrap</td>
-                        </tr>
-                        <tr>
-                            <td>2</td>
-                            <td>Jacob</td>
-                            <td>Thornton</td>
-                            <td>@fat</td>
-                        </tr>
-                        <tr>
-                            <td>3</td>
-                            <td colspan="2">Larry the Bird</td>
-                            <td>@twitter</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-            <div class="col-md-6">
-                <table class="table table-condensed">
-                    <thead>
-                        <tr>
-                            <th>#</th>
-                            <th>First Name</th>
-                            <th>Last Name</th>
-                            <th>Username</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>1</td>
-                            <td>Mark</td>
-                            <td>Otto</td>
-                            <td>@mdo</td>
-                        </tr>
-                        <tr>
-                            <td>2</td>
-                            <td>Jacob</td>
-                            <td>Thornton</td>
-                            <td>@fat</td>
-                        </tr>
-                        <tr>
-                            <td>3</td>
-                            <td colspan="2">Larry the Bird</td>
-                            <td>@twitter</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
+    </div>
+    <div class="container" role="main">
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
         <div class="page-header">
             <h1>Thumbnails</h1>
         </div>
@@ -672,9 +554,12 @@
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script src="js/bootstrap.js"></script>
-    <script src="js/app-deps.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js">
+    </script>
+    <script src="js/bootstrap.js">
+    </script>
+    <script src="js/app-deps.js">
+    </script>
 </body>
 
 </html>
