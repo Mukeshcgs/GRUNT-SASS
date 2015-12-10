@@ -1,4 +1,4 @@
-/*!TripNavigator - v0.0.1 -  2015-12-09 *//*!
+/*!TripNavigator - v0.0.1 -  2015-12-10 *//*!
  * jQuery JavaScript Library v2.1.4
  * http://jquery.com/
  *
@@ -15186,11 +15186,8 @@ return $.widget( "ui.slider", $.ui.mouse, {
 $(document).ready(function() {
     //Get height for background image
     $('.main-bg').height($(window).height());
-
-
     //Align the search center of the page
     //$('.filter-container').height();
-
     $(".filter").click(function(e) {
         $(window).unbind('scroll');
         $("#selectors-wrapper").css('display', 'block');
@@ -15222,6 +15219,15 @@ $(document).ready(function() {
         $("#amount").val("$" + $("#slider-range").slider("values", 0) +
             " - $" + $("#slider-range").slider("values", 1));
     });
+    //REGION
+    var selector = '.region-item';
+
+    $(selector).on('click', function() {
+        $(selector).removeClass('selected');
+        $(this).addClass('selected');
+    });
+
+
     // Datepicker
     $(function() {
         $("#datepicker").datepicker({
@@ -15231,15 +15237,6 @@ $(document).ready(function() {
         $('#date-input').change(function() {
             $('#datepicker').datepicker('setDate', $(this).val());
         });
-
-        /*$('#z').datepicker({
-            inline: true,
-            altField: '#d'
-        });
-
-        $('#d').change(function() {
-            $('#z').datepicker('setDate', $(this).val());
-        });*/
     });
     $(function() {
         $(window).scroll(function() {
@@ -15251,11 +15248,54 @@ $(document).ready(function() {
             } else {
                 $('.sticky-nav').removeClass('navbar-fixed-top');
                 //$('.sticky-nav').fadeOut();
-
-
             }
         });
+    });
+    //FLIP EFFECT
+    /*$('.card').hover(function() {
+    $(this).toggleClass('flipped');
+});
+*/
 
+    //FILTER SLIDER
+    $(function() {
+        var currentPosition = 0;
+        var slideWidth = 500;
+        var slides = $('.slide');
+        //var numberOfSlides = slides.length;
+        slides.wrapAll('<div id="slidesHolder"></div>')
+        slides.css({
+            'float': 'left'
+        });
+        $('#slideshow').prepend('<span class="nav" id="leftNav">Move Left</span>')
+            .append('<span class="nav" id="rightNav">Move Right</span>');
+        $('.nav').bind('click', function() {
+            if (($(this).attr('id') == 'rightNav')) {
+                if (currentPosition == 0) {
+                    currentPosition = currentPosition + 1
+                } else if (currentPosition == 1) {
+                    currentPosition = currentPosition + 1
+                } else if (currentPosition == 2) {
+                    currentPosition = 0
+                }
+            }
+            if (($(this).attr('id') == 'leftNav')) {
+                if (currentPosition == 0) {
+                    currentPosition = currentPosition + 2
+                } else if (currentPosition == 1) {
+                    currentPosition = currentPosition - 1
+                } else if (currentPosition == 2) {
+                    currentPosition = currentPosition - 1
+                }
+            }
+            moveSlide();
+        });
+
+        function moveSlide() {
+            $('#slidesHolder').animate({
+                'marginLeft': slideWidth * (-currentPosition)
+            });
+        };
     });
 });
 

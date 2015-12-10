@@ -547,12 +547,13 @@
 
   .navbar-nav {
     > li > a {
-      color: $navbar-inverse-link-color;
+      color: $navbar-inverse-a-color;
+      margin:10px;
 
       &:hover,
       &:focus {
         color: $navbar-inverse-link-hover-color;
-        background-color: $navbar-inverse-link-hover-bg;
+        background-color:$navbar-inverse-link-active-bg;
       }
     }
     > .active > a {
@@ -561,6 +562,8 @@
       &:focus {
         color: $navbar-inverse-link-active-color;
         background-color: $navbar-inverse-link-active-bg;
+        border:2px $navbar-inverse-link-hover-color solid;
+
       }
     }
     > .disabled > a {
