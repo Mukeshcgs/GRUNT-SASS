@@ -1,16 +1,42 @@
 //THis is script.js file
 $(document).ready(function() {
     //Get height for background image
-    $('.main-bg').height($(window).height());
+    var winW = $(window).width();
+    var winH = $(window).height();
+    if (winW < 480) {
+        $('.main-bg').css({
+            'height': 'auto'
+        });
+        $('selectors-close').width(winW);
+        $('selectors-close').height(winH);
+    } else {
+        $('.main-bg').height(winH);
+    }
     //Align the search center of the page
     //$('.filter-container').height();
-    $(".filter").click(function(e) {
-        $(window).unbind('scroll');
+    $(".f-popup").click(function(e) {
+
         $("#selectors-wrapper").css('display', 'block');
         $("#selectors-wrapper").css('opacity', 1);
         $(this).find(".popup").fadeIn("slow");
         $('body').addClass('hide-scroll');
-        $('.popup').width($(this).width() + 30);
+        //$('.popup').width($(this).width() + 30);
+        $('#people-slider').bxSlider({
+            mode: 'vertical',
+            speed: 100,
+            pager: false,
+            controls: true,
+            minSlides: 5,
+            infiniteLoop: false,
+            maxSlides: 3,
+        });
+        if (winW < 480) {
+            $(window).bind('scroll');
+            $(window).bind("touchmove");
+        } else {
+            $(window).unbind('scroll');
+            $(window).unbind("touchmove");
+        }
 
         e.preventDefault();
     });
@@ -42,6 +68,22 @@ $(document).ready(function() {
         $(selector).removeClass('selected');
         $(this).addClass('selected');
     });
+    //REGION SLIDER
+    /*$('#region-slider').bxSlider({
+    mode: 'vertical',
+    speed: 500,
+    slideMargin: 0,
+    infiniteLoop: false,
+    pager: false,
+    controls: true,
+    minSlides: 3,
+    maxSlides: 4,
+    moveSlides: 3,
+    adaptiveHeight: false
+});
+*/
+
+
 
 
     // Datepicker
@@ -68,49 +110,11 @@ $(document).ready(function() {
         });
     });
     //FLIP EFFECT
-    /*$('.card').hover(function() {
-    $(this).toggleClass('flipped');
-});
-*/
+    $('.card').hover(function() {
+        $(this).toggleClass('flipped');
+    });
+
 
     //FILTER SLIDER
-    $(function() {
-        var currentPosition = 0;
-        var slideWidth = 500;
-        var slides = $('.slide');
-        //var numberOfSlides = slides.length;
-        slides.wrapAll('<div id="slidesHolder"></div>')
-        slides.css({
-            'float': 'left'
-        });
-        $('#slideshow').prepend('<span class="nav" id="leftNav">Move Left</span>')
-            .append('<span class="nav" id="rightNav">Move Right</span>');
-        $('.nav').bind('click', function() {
-            if (($(this).attr('id') == 'rightNav')) {
-                if (currentPosition == 0) {
-                    currentPosition = currentPosition + 1
-                } else if (currentPosition == 1) {
-                    currentPosition = currentPosition + 1
-                } else if (currentPosition == 2) {
-                    currentPosition = 0
-                }
-            }
-            if (($(this).attr('id') == 'leftNav')) {
-                if (currentPosition == 0) {
-                    currentPosition = currentPosition + 2
-                } else if (currentPosition == 1) {
-                    currentPosition = currentPosition - 1
-                } else if (currentPosition == 2) {
-                    currentPosition = currentPosition - 1
-                }
-            }
-            moveSlide();
-        });
 
-        function moveSlide() {
-            $('#slidesHolder').animate({
-                'marginLeft': slideWidth * (-currentPosition)
-            });
-        };
-    });
 });

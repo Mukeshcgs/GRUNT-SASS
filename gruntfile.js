@@ -64,6 +64,7 @@ module.exports = function(grunt) {
                     'libs/jquery-ui/themes/base/mouse.css',
                     'libs/jquery-ui/themes/base/datepicker.css',
                     'libs/jquery-ui/themes/base/slider.css',
+                    'libs/bxslider/bx_styles/bx_styles.css',
                 ],
                 dest: 'dest/css/app-deps.css'
 
@@ -91,7 +92,9 @@ module.exports = function(grunt) {
                     'libs/jquery-ui/ui/datepicker.js',
                     'libs/jquery-ui/ui/slider.js',
                     'src/js/jquery-ui-touch.js',
+                    'libs/bxslider/jquery.bxSlider.min.js',
                     'src/js/script.js',
+                    'src/js/slider.js',
                 ],
                 dest: 'dest/js/app-deps.js'
             },

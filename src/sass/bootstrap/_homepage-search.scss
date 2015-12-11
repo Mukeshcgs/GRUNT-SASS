@@ -16,6 +16,9 @@
                     margin-right: 5px;
                     margin-left: 15px;
                 }
+                @media (max-width: $screen-xs-max) {
+                    display: none;
+                }
             }
             
             .log-reg {
@@ -92,9 +95,27 @@
                     left: 15px;
                     cursor: default;
                     color: #000000;
-                    #region {
+                    min-width: 250px;
+                    #region,
+                    #region-slider {
                         overflow: hidden;
                         height: 100%;
+                        .region-container {
+                            overflow: hidden;
+                            height: 100%;
+                        }
+                        .sld-btn {
+                            position: absolute;
+                            top: 50%;
+                            color: $tn-primary;
+                            width: 30px;
+                            height: 30px;
+                            margin-top: -15px;
+                        }
+                        .prev-btn {
+                            right: 10px;
+                        }
+                        .next-btn {}
                         span {
                             display: block;
                             padding: 5px 0px;
@@ -102,11 +123,27 @@
                                 background: $tn-primary;
                                 color: #ffffff;
                             }
-                            .active {
-                                background: $tn-primary;
-                                color: #ffffff;
-                            }
                         }
+                        .selected {
+                            background: $tn-primary;
+                            color: #ffffff;
+                        }
+                    }
+                    #people-slider {
+                        .peoples {
+                            color: $tn-primary;
+                            display: block;
+                            padding: 10px 0px;
+                        }
+                    }
+                    @media (max-width: $screen-xs-max) {
+                        position: fixed;
+                        width: 80%;
+                        height: 50%;
+                        bottom: 10%;
+                        left: 10%;
+                        top: 10%;
+                        right: 10%;
                     }
                 }
             }
@@ -123,7 +160,7 @@
             
             #selectors-wrapper {
                 display: none;
-                position: absolute;
+                position: fixed;
                 left: 0;
                 top: 0;
                 width: 100%;

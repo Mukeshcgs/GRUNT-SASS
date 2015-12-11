@@ -61,7 +61,7 @@
         <div class="filter-container ">
             <!-- budget filter -->
             <div class="col-md-2">
-                <div class="filter hvr-sweep-to-right" id="budget">
+                <div class="filter f-popup hvr-sweep-to-right" id="budget">
                     <!-- RANGE POPUP -->
                     <div class="popup">
                         <div id="slider-vertical" style="height:100%;    margin: 0 auto;"></div>
@@ -76,19 +76,16 @@
             </div>
             <!-- region filter -->
             <div class="col-md-2">
-                <div class="filter hvr-sweep-to-right" id="region">
+                <div class="filter f-popup hvr-sweep-to-right" id="region">
                     <div class="popup">
-                        <div id="region">
-                            <span class="region-item selected" data-region="1">Region-1</span>
-                            <span class="region-item" data-region="2">Region-2</span>
-                            <span class="region-item" data-region="3">Region-3</span>
-                            <span class="region-item" data-region="4">Region-4</span>
-                            <span class="region-item" data-region="5">Region-5</span>
-                            <span class="region-item" data-region="6">Region-6</span>
-                            <span class="region-item" data-region="7">Region-7</span>
-                            <span class="region-item" data-region="8">Region-8</span>
-                            <span class="region-item" data-region="9">Region-9</span>
-                            <span class="region-item" data-region="10">Region-10</span>
+                        <div id="region"><span class="next-btn sld-btn"><i class="trp-icon trp-direction309"></i></span>
+                            <div class="region-container">
+                                <span class="region-item " data-region="1">Region-1</span>
+                                <span class="region-item" data-region="2">Region-2</span>
+                                <span class="region-item" data-region="3">Region-3</span>
+                                <span class="region-item" data-region="4">Region-4</span>
+                            </div>
+                            <span class="prev-btn sld-btn"><i class="trp-icon trp-direction306"></i></span>
                         </div>
                     </div>
                     <div class="filter-icon"><i class="trp-3x trp-icon trp-money510"></i></div>
@@ -98,9 +95,23 @@
             </div>
             <!-- date filter -->
             <div class="col-md-2">
-                <div class="filter hvr-sweep-to-right" id="theme">
+                <div class="filter f-popup hvr-sweep-to-right" id="theme">
                     <div class="popup">
-                        <div id=""></div>
+                        <div id="region-slider">
+                            <div><span class="region-item ">Region-1</span></div>
+                            <div><span class="region-item ">Region-2</span></div>
+                            <div><span class="region-item ">Region-3</span></div>
+                            <div><span class="region-item ">Region-1</span></div>
+                            <div><span class="region-item ">Region-2</span></div>
+                            <div><span class="region-item ">Region-3</span></div>
+                            <div><span class="region-item ">Region-4</span></div>
+                            <div><span class="region-item ">Region-5</span></div>
+                            <div><span class="region-item ">Region-6</span></div>
+                            <div><span class="region-item ">Region-7</span></div>
+                            <div><span class="region-item ">Region-8</span></div>
+                            <div><span class="region-item ">Region-9</span></div>
+                            <div><span class="region-item ">Region-1</span></div>
+                        </div>
                     </div>
                     <div class="filter-icon"><i class="trp-3x trp-icon trp-alphabet14"></i></div>
                     <div class="filter-arrow"><i class="trp-icon trp-direction306"></i></div>
@@ -109,7 +120,7 @@
             </div>
             <!-- theme filter -->
             <div class="col-md-2">
-                <div class="filter hvr-sweep-to-right" id="date">
+                <div class="filter f-popup hvr-sweep-to-right" id="date">
                     <div class="popup">
                         <input type="hidden" id="date-input" />
                         <div id="datepicker"></div>
@@ -121,9 +132,34 @@
             </div>
             <!-- people filter -->
             <div class="col-md-2">
-                <div class="filter hvr-sweep-to-right" id="people">
+                <div class="filter f-popup hvr-sweep-to-right" id="people">
                     <div class="popup">
-                        <div id="slider-vertical"></div>
+                        <div id="people-slider">
+                            <div>
+                                <span class="peoples"><i class="trp-3x trp-icon trp-profile17">2</i><br/>
+                                For 2 Peopls</span>
+                            </div>
+                            <div>
+                                <span class="peoples"><i class="trp-3x trp-icon trp-profile17">4</i><br/>
+                                For  Peopls</span>
+                            </div>
+                            <div>
+                                <span class="peoples"><i class="trp-3x trp-icon trp-profile17">8</i><br/>
+                                For 8 Peopls</span>
+                            </div>
+                            <div>
+                                <span class="peoples"><i class="trp-3x trp-icon trp-profile17">12</i><br/>
+                                For 12 Peopls</span>
+                            </div>
+                            <div>
+                                <span class="peoples"><i class="trp-3x trp-icon trp-profile17">18</i><br/>
+                                For 18 Peopls</span>
+                            </div>
+                            <div>
+                                <span class="peoples"><i class="trp-3x trp-icon trp-profile17">18+</i><br/>
+                                More than 18 Peopls</span>
+                            </div>
+                        </div>
                     </div>
                     <div class="filter-icon"><i class="trp-3x trp-icon trp-profile17"></i></div>
                     <div class="filter-arrow"><i class="trp-icon trp-direction306"></i></div>
@@ -168,21 +204,6 @@
                 </ul>
             </div>
             <!--/.nav-collapse -->
-        </div>
-    </div>
-    <div class="row">
-        <div id="slideshow">
-            <div id="slideshowWindow">
-                <div class="slide">
-                    <img src="http://www.webchief.co.uk//blog/simple-jquery-slideshow/slide1.jpg" />
-                </div>
-                <div class="slide">
-                    <img src="http://www.webchief.co.uk//blog/simple-jquery-slideshow/slide2.jpg" />
-                </div>
-                <div class="slide">
-                    <img src="http://www.webchief.co.uk//blog/simple-jquery-slideshow/slide3.jpg" />
-                </div>
-            </div>
         </div>
     </div>
     <div class="container">

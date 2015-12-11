@@ -5065,6 +5065,9 @@ button.close {
   .top-header-contact i {
     margin-right: 5px;
     margin-left: 15px; }
+  @media (max-width: 767px) {
+    .top-header-contact {
+      display: none; } }
 
 .log-reg {
   padding: 10px 0px; }
@@ -5128,19 +5131,52 @@ button.close {
     bottom: 100%;
     left: 15px;
     cursor: default;
-    color: #000000; }
-    .filter-container .popup #region {
+    color: #000000;
+    min-width: 250px; }
+    .filter-container .popup #region,
+    .filter-container .popup #region-slider {
       overflow: hidden;
       height: 100%; }
-      .filter-container .popup #region span {
+      .filter-container .popup #region .region-container,
+      .filter-container .popup #region-slider .region-container {
+        overflow: hidden;
+        height: 100%; }
+      .filter-container .popup #region .sld-btn,
+      .filter-container .popup #region-slider .sld-btn {
+        position: absolute;
+        top: 50%;
+        color: #B10008;
+        width: 30px;
+        height: 30px;
+        margin-top: -15px; }
+      .filter-container .popup #region .prev-btn,
+      .filter-container .popup #region-slider .prev-btn {
+        right: 10px; }
+      .filter-container .popup #region span,
+      .filter-container .popup #region-slider span {
         display: block;
         padding: 5px 0px; }
-        .filter-container .popup #region span:hover {
+        .filter-container .popup #region span:hover,
+        .filter-container .popup #region-slider span:hover {
           background: #B10008;
           color: #ffffff; }
-        .filter-container .popup #region span .active {
-          background: #B10008;
-          color: #ffffff; }
+      .filter-container .popup #region .selected,
+      .filter-container .popup #region-slider .selected {
+        background: #B10008;
+        color: #ffffff; }
+    .filter-container .popup #people-slider .peoples {
+      color: #B10008;
+      display: block;
+      padding: 10px 0px; }
+    @media (max-width: 767px) {
+      .filter-container .popup {
+        position: fixed;
+        width: 80%;
+        height: 50%;
+        bottom: 10%;
+        left: 10%;
+        top: 10%;
+        right: 10%; } }
 
 .sticky-nav {
   /* background: #000000; */ }
@@ -5151,7 +5187,7 @@ button.close {
 
 #selectors-wrapper {
   display: none;
-  position: absolute;
+  position: fixed;
   left: 0;
   top: 0;
   width: 100%;
