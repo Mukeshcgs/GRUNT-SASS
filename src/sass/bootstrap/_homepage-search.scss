@@ -96,9 +96,11 @@
                     cursor: default;
                     color: #000000;
                     min-width: 250px;
+                    .bx-viewport {
+                        height: 230px;
+                    }
                     #region,
                     #region-slider {
-                        overflow: hidden;
                         height: 100%;
                         .region-container {
                             overflow: hidden;
@@ -148,6 +150,22 @@
                 }
             }
             
+            .partners {
+                background: $tn-secondery;
+                padding: 60px;
+                .bx-wrapper {
+                    //max-width: 100%!important;
+                }
+                h2 {
+                    color: $tn-white;
+                    font-family: "Open Sans", Helvetica, Arial, sans-serif;
+                }
+            }
+            
+            .sec-heading {
+                padding: 25px 0px;
+            }
+            
             //sticky-nav
             .sticky-nav {
                 /* background: #000000; */
@@ -188,8 +206,11 @@
             /* About Section */
             
             .about {
-                background: $tn-primary;
-                color: $tn-white;
+                //background: $tn-primary;
+                //color: $tn-white;
+                p {
+                    //color: $tn-white;
+                }
             }
             /******************* FACILITIES ***********************/
             
@@ -226,7 +247,7 @@
             }
             
             .cardWrapper {
-                margin-top: 50px;
+                margin-top: 10px;
             }
             
             .animation {
@@ -277,8 +298,7 @@
             .card {
                 height: 300px;
                 cursor: pointer;
-                border: 2px solid $color_mine_shaft_approx;
-                margin-bottom: 25px;
+                margin: 15px;
                 -webkit-transition: -webkit-transform 0.6s;
                 -moz-transition: -moz-transform 0.6s;
                 -o-transition: -o-transform 0.6s;
@@ -432,3 +452,31 @@
                 padding-left: 0 !important;
             }
             /******************* END MISSION*******************/
+            
+            .tn-icon {
+                color: #B10008;
+                text-align: center;
+            }
+            
+            .tn-lg {
+                font-size: 1.3333333333333333em;
+                line-height: .75em;
+                vertical-align: -15%
+            }
+            
+            .tn-2x {
+                font-size: 2em
+            }
+            
+            .tn-3x {
+                font-size: 3em
+            }
+            
+            .tn-4x {
+                font-size: 4em
+            }
+            
+            .tn-5x {
+                font-size: 5em
+            }
+            /*****************************************************/
