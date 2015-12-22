@@ -340,7 +340,12 @@
 // Default navbar
 .navbar-default {
     background-color: $navbar-default-bg;
-    border-color: $navbar-default-border;
+    //border-color: $navbar-default-border;
+    //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+                box-shadow: 3px 5px 20px 2px $black_25;
+                -webkit-box-shadow: 0 2px 10px $black_16, 0 2px 5px $black_26;
+                //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+                box-shadow: 0 2px 10px $black_16, 0 2px 5px $black_26;
     .navbar-brand {
         color: $navbar-default-brand-color;
         &:hover,
@@ -358,7 +363,7 @@
             margin: 10px;
             &:hover,
             &:focus {
-                color: $navbar-default-link-hover-color;
+                color: $tn-primary;
                 background-color: $navbar-default-link-hover-bg;
             }
         }
@@ -367,7 +372,8 @@
             &:hover,
             &:focus {
                 color: $navbar-default-link-active-color;
-                background-color: $navbar-default-link-active-bg;
+                //background-color: $navbar-default-link-active-bg;
+                border: 2px $tn-primary solid;
             }
         }
         > .disabled > a {

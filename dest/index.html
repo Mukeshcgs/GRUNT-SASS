@@ -57,7 +57,7 @@
     </div>
     <!-- -->
     <!-- main search -->
-    <div class="main-bg">
+    <div id="main-cont" class="main-bg">
         <div class="filter-container ">
             <!-- budget filter -->
             <div class="col-md-2">
@@ -69,61 +69,85 @@
                     <div>
                         <input type="text" id="amount" readonly style="border:0; color:#f6931f; font-weight:bold; width:100%;text-align:center;    background: transparent;">
                     </div>
-                    <div class="filter-icon"><i class="tn-3x tn-icon tn-money
-"></i></div>
+                    <div class="filter-icon"><i class="tn-3x tn-icon tn-money"></i></div>
                     <div class="filter-arrow"><i class="tn-icon tn-direction306"></i></div>
                     <div>BUDGET</div>
                 </div>
             </div>
             <!-- region filter -->
             <div class="col-md-2">
-                <div class="filter f-popup " id="region">
+                <div class="filter f-popup" id="region-sec">
                     <div class="popup">
-                        <div id="region"><span class="next-btn sld-btn"><i class="tn-icon tn-direction309"></i></span>
+                        <div id="region">
+                            <span class="next-btn sld-btn"><i class="tn-icon tn-direction309"></i></span>
                             <div class="region-container">
-                                <span class="region-item " data-region="1">Region-1</span>
-                                <span class="region-item" data-region="2">Region-2</span>
-                                <span class="region-item" data-region="3">Region-3</span>
-                                <span class="region-item" data-region="4">Region-4</span>
+                                <div><span class="region-item">Region-1</span></div>
+                                <div><span class="region-item">Region-2</span></div>
+                                <div><span class="region-item">Region-3</span></div>
+                                <div><span class="region-item">Region-4</span></div>
+                                <div><span class="region-item">Region-5</span></div>
+                                <div><span class="region-item">Region-6</span></div>
+                                <div><span class="region-item">Region-7</span></div>
+                                <div><span class="region-item ">Region-8</span></div>
+                                <div><span class="region-item ">Region-9</span></div>
+                                <div><span class="region-item ">Region-10</span></div>
+                                <div><span class="region-item ">Region-11</span></div>
+                                <div><span class="region-item ">Region-12</span></div>
+                                <div><span class="region-item ">Region-13</span></div>
+                                <div><span class="region-item ">Region-14</span></div>
+                                <div><span class="region-item ">Region-15</span></div>
+                                <div><span class="region-item ">Region-16</span></div>
+                                <div><span class="region-item ">Region-17</span></div>
+                                <div><span class="region-item ">Region-18</span></div>
+                                <div><span class="region-item ">Region-19</span></div>
+                                <div><span class="region-item ">Region-10</span></div>
                             </div>
                             <span class="prev-btn sld-btn"><i class="tn-icon tn-direction306"></i></span>
                         </div>
+                    </div>
+                    <div>
+                        <span id="slected-region" style="border:0; color:#f6931f; font-weight:bold;width:100%;text-align:center;"></span>
                     </div>
                     <div class="filter-icon"><i class="tn-3x tn-icon tn-money"></i></div>
                     <div class="filter-arrow"><i class="tn-icon tn-direction306"></i></div>
                     <div>REGION</div>
                 </div>
             </div>
-            <!-- date filter -->
+            <!-- THEME filter -->
             <div class="col-md-2">
-                <div class="filter f-popup " id="theme">
+                <div class="filter f-popup " id="theme-sec">
                     <div class="popup">
-                        <div id="region-slider">
-                            <div><span class="region-item ">Region-1</span></div>
-                            <div><span class="region-item ">Region-2</span></div>
-                            <div><span class="region-item ">Region-3</span></div>
-                            <div><span class="region-item ">Region-4</span></div>
-                            <div><span class="region-item ">Region-5</span></div>
-                            <div><span class="region-item ">Region-6</span></div>
-                            <div><span class="region-item ">Region-7</span></div>
-                            <div><span class="region-item ">Region-8</span></div>
-                            <div><span class="region-item ">Region-9</span></div>
-                            <div><span class="region-item ">Region-10</span></div>
-                            <div><span class="region-item ">Region-11</span></div>
-                            <div><span class="region-item ">Region-12</span></div>
-                            <div><span class="region-item ">Region-13</span></div>
-                            <div><span class="region-item ">Region-14</span></div>
-                            <div><span class="region-item ">Region-15</span></div>
-                            <div><span class="region-item ">Region-16</span></div>
-                            <div><span class="region-item ">Region-17</span></div>
-                            <div><span class="region-item ">Region-18</span></div>
-                            <div><span class="region-item ">Region-19</span></div>
-                            <div><span class="region-item ">Region-1
-0</span></div>
+                        <div id="theme">
+                            <span class="next-btn sld-btn"><i class="tn-icon tn-direction309"></i></span>
+                            <div class="theme-container">
+                                <div><span class="theme-item ">THEME-1</span></div>
+                                <div><span class="theme-item ">THEME-2</span></div>
+                                <div><span class="theme-item ">THEME-3</span></div>
+                                <div><span class="theme-item ">THEME-4</span></div>
+                                <div><span class="theme-item ">THEME-5</span></div>
+                                <div><span class="theme-item ">THEME-6</span></div>
+                                <div><span class="theme-item ">THEME-7</span></div>
+                                <div><span class="theme-item ">THEME-8</span></div>
+                                <div><span class="theme-item ">THEME-9</span></div>
+                                <div><span class="theme-item ">THEME-10</span></div>
+                                <div><span class="theme-item ">THEME-11</span></div>
+                                <div><span class="theme-item ">THEME-12</span></div>
+                                <div><span class="theme-item ">THEME-13</span></div>
+                                <div><span class="theme-item ">THEME-14</span></div>
+                                <div><span class="theme-item ">THEME-15</span></div>
+                                <div><span class="theme-item ">THEME-16</span></div>
+                                <div><span class="theme-item ">THEME-17</span></div>
+                                <div><span class="theme-item ">THEME-18</span></div>
+                                <div><span class="theme-item ">THEME-19</span></div>
+                                <div><span class="theme-item ">THEME-10</span></div>
+                            </div>
+                            <span class="prev-btn sld-btn"><i class="tn-icon tn-direction306"></i></span>
                         </div>
                     </div>
-                    <div class="filter-icon"><i class="tn-3x tn-icon tn-alphabet
-"></i></div>
+                    <div>
+                        <span id="slected-theme" style="border:0; color:#f6931f; font-weight:bold;width:100%;text-align:center;"></span>
+                    </div>
+                    <div class="filter-icon"><i class="tn-3x tn-icon tn-alphabet"></i></div>
                     <div class="filter-arrow"><i class="tn-icon tn-direction306"></i></div>
                     <div>THEME</div>
                 </div>
@@ -144,33 +168,23 @@
             <div class="col-md-2">
                 <div class="filter f-popup " id="people">
                     <div class="popup">
-                        <div id="people-slider">
+                        <div id="people">
                             <div>
-                                <span class="peoples"><i class="tn-3x tn-icon tn-profile
-">2</i><br/>
+                                <span class="peoples"><!-- <i class="tn-2x tn-icon tn-profile">2</i><br/> -->
                                 For 2 Peopls</span>
                             </div>
+                            <div><span class="people-item"> For  Peopls</span></div>
+                            <div><span class="people-item">For 8 Peopls</span></div>
+                            <div><span class="people-item">For 12 Peopls</span></div>
+                            <div><span class="people-item">For 18 Peopls</span></div>
+                            <div><span class="people-item">More than 18 Peopls</span></div>
                             <div>
-                                <span class="peoples"><i class="tn-3x tn-icon tn-profile">4</i><br/>
-                                For  Peopls</span>
-                            </div>
-                            <div>
-                                <span class="peoples"><i class="tn-3x tn-icon tn-profile">8</i><br/>
-                                For 8 Peopls</span>
-                            </div>
-                            <div>
-                                <span class="peoples"><i class="tn-3x tn-icon tn-profile">12</i><br/>
-                                For 12 Peopls</span>
-                            </div>
-                            <div>
-                                <span class="peoples"><i class="tn-3x tn-icon tn-profile">18</i><br/>
-                                For 18 Peopls</span>
-                            </div>
-                            <div>
-                                <span class="peoples"><i class="tn-3x tn-icon tn-profile">18+</i><br/>
-                                More than 18 Peopls</span>
+                                <input class="text-center" type="text" placeholder="Add manually" />
                             </div>
                         </div>
+                    </div>
+                    <div>
+                        <span id="slected-people" style="border:0; color:#f6931f; font-weight:bold;width:100%;text-align:center;"></span>
                     </div>
                     <div class="filter-icon"><i class="tn-3x tn-icon tn-profile"></i></div>
                     <div class="filter-arrow"><i class="tn-icon tn-direction306"></i></div>
@@ -196,13 +210,13 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="sticky-logo" href="#"><img src="images/main-logo-white.png" /></a>
+                <a class="sticky-logo" href="#"><img src="images/main-logo.png" /></a>
             </div>
             <div class="navbar-collapse collapse navbar-right">
                 <ul class="nav navbar-nav">
-                    <li class="active"><a href="#">HOME</a></li>
-                    <li><a href="#about">ABOUT US</a></li>
-                    <li><a href="#contact">CLIENT</a></li>
+                    <li class="active"><a href="index.html">HOME</a></li>
+                    <li><a href="about.html">ABOUT US</a></li>
+                    <li><a href="client.html">CLIENT</a></li>
                     <li><a href="#partners">PARTNERS</a></li>
                     <li class="dropdown img-circle">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="tn-icon tn-profile"></i></a>
@@ -220,10 +234,44 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12 about">
-                <h3>ABOUT US</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem similique ratione ex distinctio officiis expedita natus soluta libero debitis laboriosam harum dicta nesciunt, officia cumque vero laudantium veritatis quibusdam ea aliquam eos tenetur error, perspiciatis modi cum. Repudiandae veritatis unde, adipisci aut doloremque quis quisquam quaerat alias excepturi tenetur ex totam aliquid. Nulla praesentium eveniet, culpa suscipit quidem nostrum, blanditiis doloremque porro, rem reprehenderit vitae laudantium itaque. Aliquam adipisci ullam eos libero officiis nostrum ipsum praesentium deserunt explicabo incidunt at veniam vel iusto, itaque amet reiciendis, impedit quis necessitatibus inventore fugit in. Sunt nesciunt doloremque doloribus, voluptatibus similique sequi corporis, eius illo ea enim quidem inventore magnam delectus ullam modi nulla quibusdam, ipsa animi ratione sed tempora numquam! Enim quod nostrum voluptatum quaerat saepe, in quibusdam, temporibus blanditiis velit corrupti exercitationem ex ipsa, sapiente molestiae itaque totam laborum provident facere voluptate. Optio dicta obcaecati repudiandae, eum excepturi reiciendis modi in!</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta, illo! Earum dolore expedita, eveniet nisi non error, consequatur quaerat, fugiat saepe minima aut quisquam nihil.</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus accusamus consequuntur, quod soluta error, obcaecati fugit porro cum et, molestias rem non eum possimus, sint magni assumenda deleniti aliquam aliquid quos quaerat esse magnam laudantium reprehenderit accusantium! Sint et a vel, similique in est dignissimos ipsam adipisci repellat aut, aperiam?</p>
+                <h3 class="">ABOUT US</h3>
+                <p>Trip Navigator Corporate Travel solutions has been created with a vision to simplify Corporate Travel & Event management by integrating all MICE services & offering them online.</p>
+                <p> The portal gives you the opportunity to plan & execute your next initiative online in the most optimum manner by offering you various options to choose from should it be an offsite, sales incentive trip, annual meeting, Event, etc. A wide range of hotels across the country to choose from. With an excellent search engine to help you shortlist the hotel of you choice basis your requirement, budget & location of choice, and a chance to post & review client feedback to assist in making the right choices.</p>
+                <p> Merchandise options across the country for you to select, should it be reward options or takeaway gifts. Browse through various options & have a hassle free experience.</p>
+                <p> A wide range of Team building options in the destination of your choice through carefully selected partners who understand your need and offer you the best team building solutions. These could be outdoors or Indoor, training based or physical, motivational speakers & lots more to choose from.</p>
+                <p> Event solutions for your Gala dinners, Themed parties, Conference’s, etc, to ensure that you have all the options available at the most reasonable prices. A wide range Artist from dance troupes, MC’s, illusionists, local performances & stunning acts across the country, to choose from. </p>
+                <p>All this & much more at one place. The one stop shop for your Travel & Event planning.
+                </p>
+            </div>
+        </div>
+        <div class="row" id="partners">
+            <div class="col-md-4">
+                <figure class="text-center"><img src="images/partner.png" /></figure>
+                <div class="part-name">
+                    <h3 class="text-center">Gavin DCosta</h3>
+                </div>
+                <div class="details">
+                    <p>Gavin DCosta is a Post Graduate in Business Management with specialization in Marketing and has worked with various Multinational Banks for almost 13 years. Before starting Trip Navigator Gavin was Asst Vice President with the Royal Bank Of Scotland heading the Retail Risk Unit for the Western Region. Love for Travelling combined with his Operational expertise & ability to set-up & manage large teams has helped in strengthening Trip Navigators Operational processes, inhouse teams & culture of innovation which has resulted in establishing the company in such a short span of time.
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <figure class="text-center"><img src="images/partner.png" /></figure>
+                <div class="part-name">
+                    <h3 class="text-center">Abhishek Gupta</h3></div>
+                <div class="details">
+                    <p>Abhishek Gupta is a Post graduate in Business Management and has worked for almost 10 years in various industries like FMCG, Consumer Durables, Banking, Media. Before starting Trip Navigator Abhisek was heading the Retail Sales and Regional Corporate Business for West Zone in Fever 104 FM (Hindustan Times). Abhisek is a highly dynamic & approachable person with key eye on detail. His subject Knowledge ensures enriched value addition to the company & its clientele in terms of efficiency & effectiveness.
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <figure class="text-center"><img src="images/partner.png" /></figure>
+                <div class="part-name">
+                    <h3 class="text-center">Litesh N Jethani</h3></div>
+                <div class="details">
+                    <p>Litesh N Jethani extremely passionate about brand building and business enhancement, holds a masters degree in Brand management from Mudra Institute of Communications, and has spent more than 10 years in the industry with various media houses. His last assignment was as a Marketing Head (West), with Red FM. Litesh brings the events management and on-ground handling expertise to the company, which helps assisting the clients who have such requirements.
+                    </p>
+                </div>
             </div>
         </div>
         <div class="row">
@@ -236,13 +284,15 @@
                         <div class="col-lg-3 col-md-3 col-sm-6 cardContainer">
                             <div class="card">
                                 <div class="front">
-                                    <div class="text-center "><i class="tn-5x tn-icon tn-integrity"></i></div>
-                                    <h4>ENRICHMENT</h4>
-                                    <p>Lorem ipsum dolor sit amet</p>
+                                    <div class="text-center "><i class="tn-5x tn-icon tn-alphabet"></i></div>
+                                    <h4>Commitment </h4>
+                                    <p>(We consistently Deliver)</p>
                                 </div>
                                 <div class="back">
                                     <div class="content">
-                                        <p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi quibusdam ratione voluptas ad neque quia assumenda adipisci quos. Facere nisi minima earum quasi cumque laborum ad pariatur blanditiis ex? Perferendis!</p>
+                                        <p class="description">
+                                            At Trip Navigator we are committed towards providing seamless service to our clients. We synergize our strengths & competencies in various areas and provide a single window to cater to all our clients requirements. We are also very committed to effectively utilize our domain knowledge & expertise to deliver high quality travel solutions based on specific requirements of our clients.
+                                        </p>
                                     </div>
                                 </div>
                             </div>
@@ -250,13 +300,15 @@
                         <div class="col-lg-3 col-md-3 col-sm-6 cardContainer">
                             <div class="card">
                                 <div class="front">
-                                    <img src="images/icon2.png" class="flaticon-loupe11"></img>
-                                    <h4>ENRICHMENT</h4>
-                                    <p>Lorem ipsum dolor sit amet</p>
+                                    <div class="text-center "><i class="tn-5x tn-icon tn-alphabet"></i></div>
+                                    <h4>Integrity </h4>
+                                    <p>(We are Trustworthy)</p>
                                 </div>
                                 <div class="back">
                                     <div class="content">
-                                        <p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi quibusdam ratione voluptas ad neque quia assumenda adipisci quos. Facere nisi minima earum quasi cumque laborum ad pariatur blanditiis ex? Perferendis!</p>
+                                        <p class="description">
+                                            Honesty & Trust are extremely important components of our performance. We strive to provide solutions with sincerity & trust, because we believe in the welfare of our clients. We place the integrity of travel industry and interests of our clients above our own personal interests.
+                                        </p>
                                     </div>
                                 </div>
                             </div>
@@ -264,13 +316,15 @@
                         <div class="col-lg-3 col-md-3 col-sm-6 cardContainer">
                             <div class="card">
                                 <div class="front">
-                                    <img src="images/icon3.png" class="flaticon-loupe11"></img>
-                                    <h4>ENRICHMENT</h4>
-                                    <p>Lorem ipsum dolor sit amet</p>
+                                    <div class="text-center "><i class="tn-5x tn-icon tn-alphabet"></i></div>
+                                    <h4>Enrichment </h4>
+                                    <p>(We keep raising the bar)</p>
                                 </div>
                                 <div class="back">
                                     <div class="content">
-                                        <p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi quibusdam ratione voluptas ad neque quia assumenda adipisci quos. Facere nisi minima earum quasi cumque laborum ad pariatur blanditiis ex? Perferendis!</p>
+                                        <p class="description">
+                                            At Trip Navigator we believe in providing the best travel values to our clients. Every member of Trip Navigator is an entrepreneur who contributes to the overall success of the business constantly developing innovative travel solutions. We therefore strongly believe in continuous learning to adapt to the dynamic needs of our clients & promote flexibility in our organization to constantly excel ourselves. We grow as members & clients grow.
+                                        </p>
                                     </div>
                                 </div>
                             </div>
@@ -278,13 +332,14 @@
                         <div class="col-lg-3 col-md-3 col-sm-6 cardContainer">
                             <div class="card">
                                 <div class="front">
-                                    <img src="images/icon.png" class="flaticon-loupe11"></img>
-                                    <h4>ENRICHMENT</h4>
-                                    <p>Lorem ipsum dolor sit amet</p>
+                                    <div class="text-center "><i class="tn-5x tn-icon tn-alphabet"></i></div>
+                                    <h4>Partnership</h4>
+                                    <p>(We succeed together)</p>
                                 </div>
                                 <div class="back">
                                     <div class="content">
-                                        <p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi quibusdam ratione voluptas ad neque quia assumenda adipisci quos. Facere nisi minima earum quasi cumque laborum ad pariatur blanditiis ex? Perferendis!</p>
+                                        <p class="description">
+                                            Every member of Trip Navigator is an integral part of the company & responsible for organizational success. We place great emphasis on our longstanding relationships with all our stakeholders by striving to offer them a delightful business experience as our partners. We strongly respect our clients value systems & integrate them with ours while providing services to each individual business.</p>
                                     </div>
                                 </div>
                             </div>
@@ -334,7 +389,6 @@
     <div class="partners">
         <div class="">
             <div class="sec-heading">
-                <h2 class="text-center">Partners</h2>
                 <div class="partner-slider">
                     <div class="slide"><img src="images/hyatt-logo.png"></div>
                     <div class="slide"><img src="images/leela-logo.png"></div>

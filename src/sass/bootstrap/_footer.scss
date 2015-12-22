@@ -35,13 +35,28 @@
 }
 
 .sitemap {
-    > div > .sitemap-ul {
-        > li > a {
+    ul.sitemap-ul {}
+    ul {
+        li > a {
             color: $tn-white !important;
             padding: 10px;
             &:hover {
                 color: $tn-white !important;
                 ;
+            }
+        }
+    }
+}
+
+ul.sitemap-ul {
+    li {
+        list-style: none;
+        a {
+            color: lighten($gray-base, 50%) !important;
+            padding: 10px;
+            &:hover {
+                color: $tn-primary !important;
+                text-decoration: none;
             }
         }
     }

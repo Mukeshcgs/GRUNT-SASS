@@ -79,6 +79,10 @@
                         padding: 10px;
                     }
                 }
+                #search {
+                    background: $tn-secondery;
+                    color: $tn-white;
+                }
                 .popup {
                     display: none;
                     position: absolute;
@@ -99,11 +103,10 @@
                     .bx-viewport {
                         height: 230px;
                     }
-                    #region,
-                    #region-slider {
+                    #region {
                         height: 100%;
                         .region-container {
-                            overflow: hidden;
+                            overflow-y: scroll;
                             height: 100%;
                         }
                         .sld-btn {
@@ -131,11 +134,66 @@
                             color: #ffffff;
                         }
                     }
-                    #people-slider {
-                        .peoples {
+                    #theme {
+                        height: 100%;
+                        .theme-container {
+                            overflow-y: scroll;
+                            height: 100%;
+                        }
+                        .sld-btn {
+                            position: absolute;
+                            top: 50%;
                             color: $tn-primary;
+                            width: 30px;
+                            height: 30px;
+                            margin-top: -15px;
+                        }
+                        .prev-btn {
+                            right: 10px;
+                        }
+                        .next-btn {}
+                        span {
                             display: block;
-                            padding: 10px 0px;
+                            padding: 5px 0px;
+                            &:hover {
+                                background: $tn-primary;
+                                color: #ffffff;
+                            }
+                        }
+                        .selected {
+                            background: $tn-primary;
+                            color: #ffffff;
+                        }
+                    }
+                    #people {
+                        height: 100%;
+                        .people-container {
+                            overflow-y: scroll;
+                            height: 100%;
+                        }
+                        .sld-btn {
+                            position: absolute;
+                            top: 50%;
+                            color: $tn-primary;
+                            width: 30px;
+                            height: 30px;
+                            margin-top: -15px;
+                        }
+                        .prev-btn {
+                            right: 10px;
+                        }
+                        .next-btn {}
+                        span {
+                            display: block;
+                            padding: 5px 0px;
+                            &:hover {
+                                background: $tn-primary;
+                                color: #ffffff;
+                            }
+                        }
+                        .selected {
+                            background: $tn-primary;
+                            color: #ffffff;
                         }
                     }
                     @media (max-width: $screen-xs-max) {
@@ -163,6 +221,9 @@
             }
             
             .sec-heading {
+                .bx-wrapper {
+                    margin-bottom: 0px;
+                }
                 padding: 25px 0px;
             }
             
@@ -206,10 +267,40 @@
             /* About Section */
             
             .about {
+                margin-top: 50px;
                 //background: $tn-primary;
                 //color: $tn-white;
                 p {
-                    //color: $tn-white;
+                    color: #666666;
+                }
+            }
+            
+            #partners {
+                margin: 100px 0px;
+                .details {
+                    border: 1px #ccc solid;
+                    padding: 25px;
+                    margin-top: 25px;
+                    .part-name {
+                        h3 {
+                            text-align: center;
+                        }
+                    }
+                    p {
+                        text-align: justify;
+                        line-height: 22px;
+                        color: #666666;
+                    }
+                }
+            }
+            
+            #prod-serv,
+            #prod-serv-2 {
+                margin-bottom: 15px;
+                .prod-serv-box {
+                    border: 1px solid #cccccc;
+                    padding: 50px;
+                    text-align: center;
                 }
             }
             /******************* FACILITIES ***********************/
@@ -217,9 +308,9 @@
             //colors
             $color_mine_shaft_approx: #333;
             $white: $tn-white;
-            $black_25: rgba(0, 0, 0, 0.25);
-            $black_16: rgba(0, 0, 0, 0.16);
-            $black_26: rgba(0, 0, 0, 0.26);
+            $black_25: rgba(0, 0, 0, .2);
+            $black_16: rgba(0, 0, 0, .2);
+            $black_26: rgba(0, 0, 0, .2);
             $color_supernova_approx: #ffc700;
             $black: #000000;
             //@extend-elements
@@ -270,6 +361,7 @@
                         font-weight: 300;
                         font-size: 14px;
                         text-align: justify;
+                        line-height: 20px;
                     }
                 }
                 h3.cardTitle {
@@ -296,7 +388,7 @@
             }
             
             .card {
-                height: 300px;
+                height: 350px;
                 cursor: pointer;
                 margin: 15px;
                 -webkit-transition: -webkit-transform 0.6s;

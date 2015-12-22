@@ -94,6 +94,7 @@ module.exports = function(grunt) {
                     'src/js/jquery-ui-touch.js',
                     'libs/bxslider/jquery.bxslider.js',
                     'src/js/script.js',
+                    'src/js/sidebar.js',
                     'src/js/slider.js',
                 ],
                 dest: 'dest/js/app-deps.js'

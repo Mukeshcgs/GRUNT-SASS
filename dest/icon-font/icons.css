@@ -3,10 +3,10 @@
 
 @font-face {
 	font-family:"icons";
-	src:url("icons.eot?b4249174af0f0ad6e40f758db7406a94");
+	src:url("icons.eot?93aa98fb70e4c53fbc2d4d0868c17279");
 	src:url("icons.eot?#iefix") format("embedded-opentype"),
-		url("icons.woff?b4249174af0f0ad6e40f758db7406a94") format("woff"),
-		url("icons.ttf?b4249174af0f0ad6e40f758db7406a94") format("truetype");
+		url("icons.woff?93aa98fb70e4c53fbc2d4d0868c17279") format("woff"),
+		url("icons.ttf?93aa98fb70e4c53fbc2d4d0868c17279") format("truetype");
 	font-weight:normal;
 	font-style:normal;
 }
@@ -70,31 +70,46 @@
 }
 
 
-.tn-loupe:before {
+.tn-location:before {
 	content:"\f109";
 }
 
 
-.tn-money:before {
+.tn-loupe:before {
 	content:"\f10a";
 }
 
 
-.tn-profile:before {
+.tn-money:before {
 	content:"\f10b";
 }
 
 
-.tn-search:before {
+.tn-profile:before {
 	content:"\f10c";
 }
 
 
-.tn-tweet:before {
+.tn-rupee:before {
 	content:"\f10d";
 }
 
 
-.tn-youtube:before {
+.tn-search:before {
 	content:"\f10e";
+}
+
+
+.tn-star:before {
+	content:"\f10f";
+}
+
+
+.tn-tweet:before {
+	content:"\f110";
+}
+
+
+.tn-youtube:before {
+	content:"\f111";
 }
