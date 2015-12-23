@@ -37,8 +37,8 @@ $(document).ready(function() {
             range: true,
             orientation: "vertical",
             min: 0,
-            max: 500,
-            values: [75, 300],
+            max: 100,
+            values: [5, 50],
             slide: function(event, ui) {
                 $("#amount").val("$" + ui.values[0] + " - $" + ui.values[1]);
             }
@@ -144,10 +144,22 @@ $(document).ready(function() {
         });
         $('.prod-serv-box', this).height(highestBox);
     });
+    //STYCKEY NAVIGATION
+    var navOffset = $('.sticky-nav').offset().top;
+    $('.sticky-nav').wrap('<div class="nav-placeholder"></div>');
+    $('.nav-placeholder').height($('.sticky-nav').outerHeight());
+    $(window).scroll(function() {
+        var scrollPos = $(window).scrollTop();
+        if (scrollPos >= navOffset) {
+            $('.sticky-nav').addClass('navbar-fixed-top');
+        } else {
+            $('.sticky-nav').removeClass('navbar-fixed-top');
+        }
+    });
 
 
 });
-$(function() {
+/*$(function() {
     $(window).scroll(function() {
         // set distance user needs to scroll before we fadeIn navbar 
 
@@ -166,3 +178,4 @@ $(function() {
         }
     });
 });
+*/

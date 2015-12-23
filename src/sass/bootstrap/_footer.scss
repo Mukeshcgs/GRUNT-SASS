@@ -32,6 +32,9 @@
             }
         }
     }
+    @media (max-width: $screen-xs-max) {
+        text-align: center;
+    }
 }
 
 .sitemap {
@@ -49,6 +52,7 @@
 }
 
 ul.sitemap-ul {
+    padding: 0px;
     li {
         list-style: none;
         a {

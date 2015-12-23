@@ -29,8 +29,8 @@
             <div class="navbar-collapse collapse navbar-right">
                 <ul class="nav navbar-nav">
                     <li><a href="index.html">HOME</a></li>
-                    <li class="active"><a href="about.html">ABOUT US</a></li>
-                    <li><a href="client.html">CLIENT</a></li>
+                    <li><a href="about.html">ABOUT US</a></li>
+                    <li class="active"><a href="client.html">CLIENT</a></li>
                     <li><a href="#partners">PARTNERS</a></li>
                     <li class="dropdown img-circle">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="tn-icon tn-profile"></i></a>
@@ -46,27 +46,27 @@
         </div>
     </div>
     <div id="page-container" class="sidebar-partial sidebar-visible-lg sidebar-no-animations">
-        <!-- -->
-        <div id="selectors-wrapper">
-            <div class="selectors-close"></div>
-            <div id="selectors-container">
-            </div>
-        </div>
-        <!-- -->
         <!-- Main Sidebar -->
         <div id="sidebar">
-            <div class="sidebar-nav">
-                <div class="side-fltr active
-">
-                    <div class="popup">
+            <div class="side-overlay">
+            </div>
+            <div class="side-nav">
+                <div class="side-fltr active">
+                    <div class="side-popup">
                         <h4 class="text-center">RATE</h4>
                         <div id="rate">
-                            <div id="slider-vertical" style="height:80%;    margin: 0 auto;"></div>
+                            <div id="slider-vertical" style="height:80%; margin: 0 auto;"></div>
                         </div>
+                        <p>
+                            <button>SEARCH</button>
+                        </p>
+                        <p>
+                            <button id="done">DONE</button>
+                        </p>
                     </div><a href=""><span><i class="tn-2x tn-icon tn-rupee"></i></span>RATE</a>
                 </div>
                 <div class="side-fltr">
-                    <div class="popup">
+                    <div class="side-popup">
                         <h4 class="text-center">RATING</h4>
                         <div id="ratting">
                             <span class="next-btn sld-btn"><i class="tn-icon tn-direction309"></i></span>
@@ -81,32 +81,39 @@
                         </div>
                     </div><a href=""><span><i class="tn-2x tn-icon tn-star"></i></span>RATING</a>
                 </div>
-                <div class="side-fltr"><a href=""><span><i class="tn-2x tn-icon tn-location"></i></span>LOCATION</a></div>
+                <div class="side-fltr"><a href=""><span><i class="tn-2x tn-icon tn-location"></i></span>Location</a></div>
                 <div class="side-fltr"><a href=""><span><i class="tn-2x tn-icon tn-money"></i></span>TYPE</a></div>
                 <div class="side-fltr"><a href=""><span><i class="tn-2x tn-icon tn-search"></i></span>SEARCH</a></div>
             </div>
         </div>
         <!-- Main Container -->
         <div id="main-container">
+            <!-- -->
+            <div id="selectors-wrapper">
+                <div class="selectors-close"></div>
+                <div id="selectors-container">
+                </div>
+            </div>
+            <!-- -->
             <div class="container-fluid">
-                <div class="row wizard">
-                    <div class="col-md-1"></div>
-                    <div class="col-md-2">
+                <div class="row wizard hidden-xs">
+                    <div class="col-md-1 col-sm-1"></div>
+                    <div class="col-md-2 col-sm-2">
                         <div class="step active">HOTELS</div>
                     </div>
-                    <div class="col-md-2">
+                    <div class="col-md-2 col-sm-2">
                         <div class="step">MERCHANDISER</div>
                     </div>
-                    <div class="col-md-2">
+                    <div class="col-md-2 col-sm-2">
                         <div class="step">EVENT PLANNER</div>
                     </div>
-                    <div class="col-md-2">
+                    <div class="col-md-2 col-sm-2">
                         <div class="step">RNR</div>
                     </div>
-                    <div class="col-md-2">
+                    <div class="col-md-2 col-sm-2">
                         <div class="step">BANK WAYS</div>
                     </div>
-                    <div class="col-md-1"></div>
+                    <div class="col-md-1 col-sm-1"></div>
                 </div>
                 <!-- Wizard End -->
                 <div class="row">
@@ -115,7 +122,7 @@
                     </div>
                 </div>
                 <div class="row" id="hot-list-cont">
-                    <div class="col-md-3">
+                    <div class="col-md-3 col-sm-6">
                         <div class="hot-itm">
                             <figure>
                                 <img class="img-responsive" src="images/hotel-1.png" alt="">
@@ -123,11 +130,11 @@
                             </figure>
                             <div class="hot-dtl">
                                 <div>Holtel Name</div>
-                                <small>Location</small>
+                                <small><i class="tn-icon tn-location"></i> Location</small>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-3">
+                    <div class="col-md-3 col-sm-6">
                         <div class="hot-itm">
                             <figure>
                                 <img class="img-responsive" src="images/hotel-2.png" alt="">
@@ -135,11 +142,11 @@
                             </figure>
                             <div class="hot-dtl">
                                 <div>Holtel Name</div>
-                                <small>Location</small>
+                                <small><i class="tn-icon tn-location"></i> Location</small>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-3">
+                    <div class="col-md-3 col-sm-6">
                         <div class="hot-itm">
                             <figure>
                                 <img class="img-responsive" src="images/hotel-3.png" alt="">
@@ -147,11 +154,11 @@
                             </figure>
                             <div class="hot-dtl">
                                 <div>Holtel Name</div>
-                                <small>Location</small>
+                                <small><i class="tn-icon tn-location"></i> Location</small>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-3">
+                    <div class="col-md-3 col-sm-6">
                         <div class="hot-itm">
                             <figure>
                                 <img class="img-responsive" src="images/hotel-4.png" alt="">
@@ -159,7 +166,7 @@
                             </figure>
                             <div class="hot-dtl">
                                 <div>Holtel Name</div>
-                                <small>Location</small>
+                                <small><i class="tn-icon tn-location"></i> Location</small>
                             </div>
                         </div>
                     </div>
@@ -167,7 +174,7 @@
                 <br/>
                 <br/>
                 <div class="row" id="hot-list-cont">
-                    <div class="col-md-3">
+                    <div class="col-md-3 col-sm-6">
                         <div class="hot-itm">
                             <figure>
                                 <img class="img-responsive" src="images/hotel-3.png" alt="">
@@ -175,11 +182,11 @@
                             </figure>
                             <div class="hot-dtl">
                                 <div>Holtel Name</div>
-                                <small>Location</small>
+                                <small><i class="tn-icon tn-location"></i> Location</small>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-3">
+                    <div class="col-md-3 col-sm-6">
                         <div class="hot-itm">
                             <figure>
                                 <img class="img-responsive" src="images/hotel-2.png" alt="">
@@ -187,11 +194,11 @@
                             </figure>
                             <div class="hot-dtl">
                                 <div>Holtel Name</div>
-                                <small>Location</small>
+                                <small><i class="tn-icon tn-location"></i> Location</small>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-3">
+                    <div class="col-md-3 col-sm-6">
                         <div class="hot-itm">
                             <figure>
                                 <img class="img-responsive" src="images/hotel-4.png" alt="">
@@ -199,11 +206,11 @@
                             </figure>
                             <div class="hot-dtl">
                                 <div>Holtel Name</div>
-                                <small>Location</small>
+                                <small><i class="tn-icon tn-location"></i> Location</small>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-3">
+                    <div class="col-md-3 col-sm-6">
                         <div class="hot-itm">
                             <figure>
                                 <img class="img-responsive" src="images/hotel-1.png" alt="">
@@ -211,7 +218,8 @@
                             </figure>
                             <div class="hot-dtl">
                                 <div>Holtel Name</div>
-                                <small>Location</small>
+                                <small><i class="tn-icon tn-location"></i> Location
+</small>
                             </div>
                         </div>
                     </div>
@@ -233,7 +241,7 @@
                     </div>
                 </div>
                 <div class="row site-map">
-                    <div class="col-md-4">
+                    <div class="col-md-4 col-sm-4">
                         <ul class="sitemap-ul">
                             <li><a href="">About</a></li>
                             <li><a href="">Blog</a></li>
@@ -241,7 +249,7 @@
                             <li><a href="">Careers</a></li>
                         </ul>
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-md-4 col-sm-4">
                         <ul class="sitemap-ul">
                             <li><a href="">Contact Us</a></li>
                             <li><a href="">T & C</a></li>
@@ -250,7 +258,7 @@
                             <li><a href="">ABOUT</a></li>
                         </ul>
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-md-4 col-sm-4">
                         <ul class="sitemap-ul">
                             <li><a href="">Upcoming Sales</a></li>
                             <li><a href="">Personal Travel Planning</a></li>

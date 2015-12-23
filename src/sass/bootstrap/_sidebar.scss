@@ -1,5 +1,5 @@
     #main-container {
-        margin-left: 100px;
+        margin-left: 75px;
     }
     
     #sidebar {
@@ -7,28 +7,21 @@
         position: fixed;
         overflow: hidden;
         background: $tn-white;
-        width: 100px;
+        width: 75px;
         height: 100%;
         border-right: 1px solid lighten($gray-base, 90%);
-        .popup {
-            display: none;
-            position: absolute;
-            z-index: 12;
-            height: 250px;
-            background: #ffffff;
-            text-align: center;
-            -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.25);
-            -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.25);
-            box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.25);
-            margin-bottom: 10px;
-            padding: 10px;
-            left: 15px;
-            cursor: default;
-            color: #000000;
-            min-width: 200px;
-        }
-        .sidebar-nav {
+        .side-overlay {
             height: 100%;
+            width: 100%;
+            background: #000000;
+            opacity: 0.5;
+            position: absolute;
+            z-index: 1;
+            display: none;
+        }
+        .side-nav {
+            height: 100%;
+            position: relative;
         }
         .side-fltr {
             padding: 15px 0px;
@@ -58,6 +51,23 @@
                 i {
                     color: $tn-secondery;
                 }
+            }
+            .side-popup {
+                display: none;
+                position: absolute;
+                z-index: 12;
+                height: 250px;
+                background: #ffffff;
+                text-align: center;
+                -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.25);
+                -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.25);
+                box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.25);
+                margin-bottom: 10px;
+                padding: 10px;
+                left: 15px;
+                cursor: default;
+                color: #000000;
+                min-width: 200px;
             }
         }
         #rate {
@@ -94,7 +104,7 @@
     }
     
     .sidebar-partial #sidebar:hover {
-        width: 100px;
+        width: 75px;
         opacity: 1;
     }
     
@@ -111,7 +121,7 @@
                 padding: 20px 0px;
                 text-align: center;
                 &.active {
-                    background-image: url('../images/wizard-arrow.png');
+                    //background-image: url('../images/wizard-arrow.png');
                     background-position: bottom center;
                     background-repeat: no-repeat;
                 }
