@@ -56,6 +56,9 @@
             .filter-container {
                 padding-top: 30%;
                 .filter {
+                    @media (min-width: $screen-sm-min) {
+                                margin-bottom:20px;
+                    }
                     height: 200px;
                     background: #ffffff;
                     text-align: center;
@@ -235,6 +238,18 @@
             .sticky-logo {
                 margin: 10px;
                 display: block;
+                @media (max-width: $screen-xs-max) {}
+                @media (min-width: $screen-sm-min) {
+                    width: 150px;
+                     margin: 16px;
+                    img {
+                        width: 100%;
+                    }
+                }
+                @media (max-width: $screen-sm-max) {}
+                @media (min-width: $screen-md-min) {}
+                @media (max-width: $screen-md-max) {}
+                @media (min-width: $screen-lg-min) {}
             }
             
             #selectors-wrapper {
@@ -296,8 +311,8 @@
             
             #prod-serv,
             #prod-serv-2 {
-                margin-bottom: 15px;
                 .prod-serv-box {
+                    margin-bottom: 15px;
                     border: 1px solid #cccccc;
                     padding: 50px;
                     text-align: center;
@@ -546,14 +561,19 @@
             /******************* END MISSION*******************/
             
             .tn-icon {
-                color: #B10008;
+                color: $tn-primary;
                 text-align: center;
+                font-size: 1em;
             }
             
             .tn-lg {
                 font-size: 1.3333333333333333em;
                 line-height: .75em;
                 vertical-align: -15%
+            }
+            
+            .tn-1x {
+                font-size: 1.5em
             }
             
             .tn-2x {

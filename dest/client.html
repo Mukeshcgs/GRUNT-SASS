@@ -4,7 +4,9 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="HandheldFriendly" content="true" />
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="icon" href="images/favicon.ico">
@@ -51,60 +53,116 @@
             <div class="side-overlay">
             </div>
             <div class="side-nav">
-                <div class="side-fltr active">
-                    <div class="side-popup">
-                        <h4 class="text-center">RATE</h4>
-                        <div id="rate">
-                            <div id="slider-vertical" style="height:80%; margin: 0 auto;"></div>
-                        </div>
-                        <p>
-                            <button>SEARCH</button>
-                        </p>
-                        <p>
-                            <button id="done">DONE</button>
-                        </p>
-                    </div><a href=""><span><i class="tn-2x tn-icon tn-rupee"></i></span>RATE</a>
-                </div>
-                <div class="side-fltr">
-                    <div class="side-popup">
-                        <h4 class="text-center">RATING</h4>
-                        <div id="ratting">
-                            <span class="next-btn sld-btn"><i class="tn-icon tn-direction309"></i></span>
-                            <div class="rate-container">
-                                <div><span class="region-item">Region-1</span></div>
-                                <div><span class="region-item">Region-2</span></div>
-                                <div><span class="region-item">Region-3</span></div>
-                                <div><span class="region-item">Region-4</span></div>
-                                <div><span class="region-item">Region-5</span></div>
+                <form action="">
+                    <div class="side-fltr active">
+                        <div class="side-popup">
+                            <input type="text" id="amount" readonly style="border:0; color:#f6931f; font-weight:bold; width:100%;text-align:center;    background: transparent;">
+                            <div id="rate">
+                                <div id="slider-vertical" style="height:80%; margin: 0 auto;"></div>
                             </div>
-                            <span class="prev-btn sld-btn"><i class="tn-icon tn-direction306"></i></span>
+                            <div class="slide-popup-action"><span id="done"><i class="tn-1x tn-icon tn-rupee"></i></span> <span id="search"><i class="tn-1x tn-icon tn-search"></i></span></div>
                         </div>
-                    </div><a href=""><span><i class="tn-2x tn-icon tn-star"></i></span>RATING</a>
-                </div>
-                <div class="side-fltr"><a href=""><span><i class="tn-2x tn-icon tn-location"></i></span>Location</a></div>
-                <div class="side-fltr"><a href=""><span><i class="tn-2x tn-icon tn-money"></i></span>TYPE</a></div>
-                <div class="side-fltr"><a href=""><span><i class="tn-2x tn-icon tn-search"></i></span>SEARCH</a></div>
+                        <a href=""><span><i class="tn-2x tn-icon tn-rupee"></i></span>RATE</a>
+                    </div>
+                    <div class="side-fltr">
+                        <div class="side-popup">
+                            <div id="ratting">
+                                <div class="rate-container">
+                                    <div><span><i class="tn-1x tn-icon tn-star"></i></span>
+                                        <span><i class="tn-1x tn-icon tn-star"></i></span>
+                                        <span><i class="tn-1x tn-icon tn-star"></i></span>
+                                        <span><i class="tn-1x tn-icon tn-star"></i></span>
+                                        <span><i class="tn-1x tn-icon tn-star"></i></span>
+                                    </div>
+                                    <div><span><i class="tn-1x tn-icon tn-star"></i></span>
+                                        <span><i class="tn-1x tn-icon tn-star"></i></span>
+                                        <span><i class="tn-1x tn-icon tn-star"></i></span>
+                                        <span><i class="tn-1x tn-icon tn-star"></i></span>
+                                        <span><i class="tn-1x tn-icon tn-star"></i></span>
+                                    </div>
+                                    <div><span><i class="tn-1x tn-icon tn-star"></i></span>
+                                        <span><i class="tn-1x tn-icon tn-star"></i></span>
+                                        <span><i class="tn-1x tn-icon tn-star"></i></span>
+                                        <span><i class="tn-1x tn-icon tn-star"></i></span>
+                                        <span><i class="tn-1x tn-icon tn-star"></i></span>
+                                    </div>
+                                    <div><span><i class="tn-1x tn-icon tn-star"></i></span>
+                                        <span><i class="tn-1x tn-icon tn-star"></i></span>
+                                        <span><i class="tn-1x tn-icon tn-star"></i></span>
+                                        <span><i class="tn-1x tn-icon tn-star"></i></span>
+                                        <span><i class="tn-1x tn-icon tn-star"></i></span>
+                                    </div>
+                                    <div><span><i class="tn-1x tn-icon tn-star"></i></span>
+                                        <span><i class="tn-1x tn-icon tn-star"></i></span>
+                                        <span><i class="tn-1x tn-icon tn-star"></i></span>
+                                        <span><i class="tn-1x tn-icon tn-star"></i></span>
+                                        <span><i class="tn-1x tn-icon tn-star"></i></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="slide-popup-action"><span id="done"><i class="tn-1x tn-icon tn-rupee"></i></span> <span id="search"><i class="tn-1x tn-icon tn-search"></i></span></div>
+                        </div>
+                        <a href=""><span><i class="tn-2x tn-icon tn-star"></i></span>RATING</a>
+                    </div>
+                    <div class="side-fltr">
+                        <div class="side-popup">
+                            <div id="ratting">
+                                <div class="rate-container">
+                                    <div><span class="locaton-item">Location-1</span></div>
+                                    <div><span class="locaton-item">Location-2</span></div>
+                                    <div><span class="locaton-item">Location-3</span></div>
+                                    <div><span class="locaton-item">Location-4</span></div>
+                                    <div><span class="locaton-item">Location-5</span></div>
+                                </div>
+                            </div>
+                            <div class="slide-popup-action"><span id="done"><i class="tn-1x tn-icon tn-rupee"></i></span> <span id="search"><i class="tn-1x tn-icon tn-search"></i></span></div>
+                        </div>
+                        <a href=""><span><i class="tn-2x tn-icon tn-location"></i></span>LOCATION</a></div>
+                    <div class="side-fltr">
+                        <div class="side-popup">
+                            <div id="ratting">
+                                <div class="rate-container">
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox"> All
+                                        </label>
+                                    </div>
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox"> Hotels
+                                        </label>
+                                    </div>
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox"> Resorts
+                                        </label>
+                                    </div>
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox"> Beach
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="slide-popup-action"><span id="done"><i class="tn-1x tn-icon tn-rupee"></i></span> <span id="search"><i class="tn-1x tn-icon tn-search"></i></span></div>
+                        </div><a href=""><span><i class="tn-2x tn-icon tn-money"></i></span>TYPE</a></div>
+                    <div class="side-fltr-search">
+                        <a href=""><span><i class="tn-2x tn-icon tn-search"></i></span></a>
+                    </div>
+                </form>
             </div>
         </div>
         <!-- Main Container -->
         <div id="main-container">
-            <!-- -->
-            <div id="selectors-wrapper">
-                <div class="selectors-close"></div>
-                <div id="selectors-container">
-                </div>
-            </div>
-            <!-- -->
             <div class="container-fluid">
                 <div class="row wizard hidden-xs">
-                    <div class="col-md-1 col-sm-1"></div>
                     <div class="col-md-2 col-sm-2">
                         <div class="step active">HOTELS</div>
                     </div>
-                    <div class="col-md-2 col-sm-2">
+                    <div class="col-md-2 col-sm-3">
                         <div class="step">MERCHANDISER</div>
                     </div>
-                    <div class="col-md-2 col-sm-2">
+                    <div class="col-md-2 col-sm-3">
                         <div class="step">EVENT PLANNER</div>
                     </div>
                     <div class="col-md-2 col-sm-2">
@@ -113,7 +171,6 @@
                     <div class="col-md-2 col-sm-2">
                         <div class="step">BANK WAYS</div>
                     </div>
-                    <div class="col-md-1 col-sm-1"></div>
                 </div>
                 <!-- Wizard End -->
                 <div class="row">
@@ -218,57 +275,91 @@
                             </figure>
                             <div class="hot-dtl">
                                 <div>Holtel Name</div>
-                                <small><i class="tn-icon tn-location"></i> Location
-</small>
+                                <small><i class="tn-icon tn-location"></i>Location</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br/>
+                <br/>
+                <div class="row add-cont-sbc">
+                    <div class="col-md-4">
+                        <div class="box">
+                            <span><i class="tn-1x tn-icon tn-location"></i></span>
+                            <h4>Address</h4>
+                            <div>
+                                <small>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis doloremque, inventore aspernatur quisquam sed quas!</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="box">
+                            <span><i class="tn-1x tn-icon tn-telephone"></i></span>
+                            <h4>Contact</h4>
+                            <div>
+                                <small><a href="mailto:info@tripnevigatore.com">info@tripnevigatore.com</a></small>
+                                <small>+91 0123456789</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="box">
+                            <span><i class="tn-1x tn-icon tn-envelope"></i></span>
+                            <h4>Subscribe</h4>
+                            <div>
+                                <div class="input-group">
+                                    <input type="text" class="form-control" id="exampleInputAmount" placeholder="xyz@gmail.com">
+                                    <div class="input-group-addon btn btn-sm btn-info">SUBMIT</div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <footer class="footer-inverse">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-6">
-                        <a class="" href="#"><img src="images/main-logo-white.png" /></a>
+            <footer class="footer-inverse">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-6 col-sm-4">
+                            <a class="" href="#"><img src="images/main-logo-white.png" /></a>
+                        </div>
+                        <div class="col-md-6 col-sm-8">
+                            <div class="social text-right">
+                                <a href="www.facebook.com"><i class="tn-3x tn-icon tn-fb"></i></a>
+                                <a href="www.tweeter.com"><i class="tn-3x tn-icon tn-tweet"></i></a>
+                                <a href="www.tweeter.com"><i class="tn-3x tn-icon tn-youtube"></i></a>
+                            </div>
+                        </div>
                     </div>
-                    <div class="col-md-6">
-                        <div class="social text-right">
-                            <a href="www.facebook.com"><i class="tn-3x tn-icon tn-fb"></i></a>
-                            <a href="www.tweeter.com"><i class="tn-3x tn-icon tn-tweet"></i></a>
-                            <a href="www.tweeter.com"><i class="tn-3x tn-icon tn-youtube"></i></a>
+                    <div class="row site-map">
+                        <div class="col-md-4 col-sm-4">
+                            <ul class="sitemap-ul">
+                                <li><a href="">About</a></li>
+                                <li><a href="">Blog</a></li>
+                                <li><a href="">FaQ</a></li>
+                                <li><a href="">Careers</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-4 col-sm-4">
+                            <ul class="sitemap-ul">
+                                <li><a href="">Contact Us</a></li>
+                                <li><a href="">T & C</a></li>
+                                <li><a href="">Security</a></li>
+                                <li><a href="">Privacy Policy</a></li>
+                                <li><a href="">ABOUT</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-4 col-sm-4">
+                            <ul class="sitemap-ul">
+                                <li><a href="">Upcoming Sales</a></li>
+                                <li><a href="">Personal Travel Planning</a></li>
+                                <li><a href="">FAQ</a></li>
+                                <li><a href="">Tours</a></li>
+                                <li><a href="">Journeys</a></li>
+                            </ul>
                         </div>
                     </div>
                 </div>
-                <div class="row site-map">
-                    <div class="col-md-4 col-sm-4">
-                        <ul class="sitemap-ul">
-                            <li><a href="">About</a></li>
-                            <li><a href="">Blog</a></li>
-                            <li><a href="">FaQ</a></li>
-                            <li><a href="">Careers</a></li>
-                        </ul>
-                    </div>
-                    <div class="col-md-4 col-sm-4">
-                        <ul class="sitemap-ul">
-                            <li><a href="">Contact Us</a></li>
-                            <li><a href="">T & C</a></li>
-                            <li><a href="">Security</a></li>
-                            <li><a href="">Privacy Policy</a></li>
-                            <li><a href="">ABOUT</a></li>
-                        </ul>
-                    </div>
-                    <div class="col-md-4 col-sm-4">
-                        <ul class="sitemap-ul">
-                            <li><a href="">Upcoming Sales</a></li>
-                            <li><a href="">Personal Travel Planning</a></li>
-                            <li><a href="">FAQ</a></li>
-                            <li><a href="">Tours</a></li>
-                            <li><a href="">Journeys</a></li>
-                        </ul>
-                    </div>
-                </div>
-        </footer>
+            </footer>
         </div>
         <!-- /container -->
         <!-- Bootstrap core JavaScript

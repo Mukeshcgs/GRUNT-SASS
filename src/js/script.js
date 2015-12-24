@@ -144,6 +144,16 @@ $(document).ready(function() {
         });
         $('.prod-serv-box', this).height(highestBox);
     });
+    //ADDRESS SECTION HEIGHT FIX
+    $('.add-cont-sbc').each(function() {
+        var highestBox = 0;
+        $('.box', this).each(function() {
+            if ($(this).height() > highestBox)
+                highestBox = $(this).height();
+        });
+        $('.box', this).height(highestBox);
+    });
+
     //STYCKEY NAVIGATION
     var navOffset = $('.sticky-nav').offset().top;
     $('.sticky-nav').wrap('<div class="nav-placeholder"></div>');

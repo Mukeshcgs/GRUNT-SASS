@@ -24,9 +24,9 @@
             position: relative;
         }
         .side-fltr {
-            padding: 15px 0px;
             border-bottom: 1px solid lighten($gray-base, 90%);
             a {
+                padding: 15px 0px;
                 display: block;
                 text-align: center;
                 font-size: 12px;
@@ -68,10 +68,34 @@
                 cursor: default;
                 color: #000000;
                 min-width: 200px;
+                top: 25%
+            }
+            .slide-popup-action {
+                text-align: center;
+                span {
+                    cursor: pointer;
+                    background: $tn-primary;
+                    width: 30px;
+                    height: 30px;
+                    display: inline-block;
+                    margin: 3px;
+                    padding-top: 4px;
+                    i {
+                        color: $tn-secondery;
+                    }
+                }
+            }
+        }
+        .side-fltr-search {
+            color: $tn-secondery;
+            text-align: center;
+            a {
+                padding: 15px 0px;
+                display: block;
             }
         }
         #rate {
-            height: 100%;
+            height: 150px;
             .rate-container {
                 overflow-y: scroll;
                 height: 100%;
@@ -110,24 +134,28 @@
     
     .wizard {
         margin-bottom: 25px;
-        background: $tn-white;
-        /* border-bottom: 1px lighten($gray-base, 85.5%) solid;
+        background: lighten($gray-base, 95.5%);
+        /*border-bottom: 2px lighten($gray-base, 85.5%) solid;
         box-shadow: 3px 5px 20px 2px $black_25;
         -webkit-box-shadow: 0 2px 10px $black_16, 0 2px 5px $black_26;
         box-shadow: 0 2px 10px $black_16, 0 2px 5px $black_26; */
         .col-md-2 {
-            border-right: 1px lighten($gray-base, 85.5%) solid;
+            //border-right: 1px lighten($gray-base, 85.5%) solid;
+            &:nth-lastChild(2) {
+                border-right: 0px !important;
+            }
             .step {
                 padding: 20px 0px;
                 text-align: center;
+                //border-right: 1px lighten($gray-base, 85.5%) solid;
+
                 &.active {
-                    //background-image: url('../images/wizard-arrow.png');
+                    border-bottom: 2px $tn-secondery solid;
+                    background: $tn-white;
+                    background-image: url('../images/wizard-arrow.png');
                     background-position: bottom center;
                     background-repeat: no-repeat;
                 }
-            }
-            &:nth-lastChild(2) {
-                border-right: 0px !important;
             }
         }
     }

@@ -1,7 +1,11 @@
 .footer-inverse {
     background-color: $navbar-inverse-bg;
     border-color: $navbar-inverse-border;
-    padding: 25px 0px;
+    padding: 25px 0px 0px;
+}
+
+.site-map {
+    margin: 15px 0px;
 }
 
 .social {
@@ -57,11 +61,46 @@ ul.sitemap-ul {
         list-style: none;
         a {
             color: lighten($gray-base, 50%) !important;
-            padding: 10px;
+            padding: 5px;
+            display: block;
             &:hover {
                 color: $tn-primary !important;
                 text-decoration: none;
             }
         }
+    }
+}
+
+.box {
+    border: 1px solid lighten($gray-base, 90%);
+    padding: 5px 15px 15px 15px;
+    position: relative;
+    margin-bottom: 15px;
+    > div {
+        padding-top: 10px;
+        p {
+            color: lighten($gray-base, 50%);
+        }
+        .input-group-addon {
+            background-color: $tn-secondery;
+        }
+    }
+    span {
+        text-align: center;
+        background: lighten($gray-base, 90%);
+        width: 30px;
+        height: 30px;
+        display: inline-block;
+        position: absolute;
+        left: 15px;
+        top: 0px;
+        i {
+            margin-top: 8px;
+            color: lighten($gray-base, 50%);
+        }
+    }
+    h4 {
+        margin-top: 0px;
+        margin-left: 40px;
     }
 }

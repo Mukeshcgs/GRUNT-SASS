@@ -361,6 +361,10 @@
         > li > a {
             color: $navbar-default-link-color;
             margin: 10px;
+            @media (min-width: $screen-sm-min) {
+                margin: 10px 2px;
+            }                
+            
             &:hover,
             &:focus {
                 color: $tn-primary;
