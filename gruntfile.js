@@ -1,57 +1,109 @@
+'use strict';
 module.exports = function(grunt) {
-    // load all grunt tasks matching the ['grunt-*', '@*/grunt-*'] patterns
+    // Time how long tasks take. Can help when optimizing build times
+    require('time-grunt')(grunt);
+
+    // Load grunt tasks automatically
     require('load-grunt-tasks')(grunt);
+
+    // Configurable paths
+    var config = {
+        app: 'app',
+        dist: 'dist'
+    };
+
     grunt.initConfig({
+        // Project settings
+        config: config,
         pkg: grunt.file.readJSON('package.json'),
+        copy: {
+            // making working assets copy
+            main: {
+                files: [{
+                    expand: false,
+                    flatten: false,
+                    src: ['<%= config.dist %>/**'],
+                    dest: 'build/',
+                    filter: 'isFile'
+                }, ]
+            }
+        },
         imagemin: {
             dynamic: {
+                options: { // Target options 
+                    optimizationLevel: 3,
+                    cache: false
+                },
                 files: [{
                     expand: true, // Enable dynamic expansion 
-                    cwd: 'src/images/', // Src matches are relative to this path 
-                    src: ['*{ jpg, gif, png,}'], // Actual patterns to match 
-                    dest: 'dest/images/' // Destination path prefix 
+                    cwd: '<%= config.app %>/images/', // app matches are relative to this path 
+                    src: ['*.{ jpg, gif, png}'], // Actual patterns to match 
+                    dest: '<%= config.dist %>/images/' // Destination path prefix 
                 }]
             }
         },
         uncss: {
             dist: {
                 files: {
-                    'dest/css/style.min.css': ['index.html']
+                    '<%= config.dist %>/css/style.min.css': ['index.html']
                 }
             }
         },
-        watch: {
-            sass: {
-                files: ['src/sass/**/*.scss'],
-                tasks: ['sass', 'cssmin'],
+        purifycss: {
+            options: {},
+            target: {
+                src: ['<%= config.dist %>/*.html'],
+                css: ['<%= config.dist %>/css/bootstrap.css'],
+                dest: '<%= config.dist %>/css/tidy-bootstrap.css'
             },
-            libs: {
-                files: ['libs/**/*.css'],
-                tasks: ['cssmin'],
-            },
-            scripts: {
-                files: ['src/js/*.js', 'lib/**/*.js'],
-                tasks: ['concat', 'uglify'],
-            }
         },
+        watch: {
+            bower: {
+                files: ['bower.json'],
+                //tasks: ['wiredep']
+            },
+            gruntfile: {
+                files: ['gruntfile.js']
+            },
+            sass: {
+                files: ['<%= config.app %>/sass/**/*.scss'],
+                tasks: ['sass', 'autoprefixer', 'cssmin'],
+            },
+            js: {
+                files: ['<%= config.app %>/js/*.js', 'lib/**/*.js'],
+                tasks: ['jshint', 'concat', 'uglify'],
+                options: {
+                    livereload: true
+                }
+            },
+            // libs: {
+            //     files: ['libs/**/*.css'],
+            //     tasks: ['cssmin'],
+            // },
+            // scripts: {
+            //     files: ['<%= config.app %>/js/*.js', 'lib/**/*.js'],
+            //     tasks: ['concat', 'uglify'],
+            // }
+        },
+
         sass: {
-            dist: {
+            main: {
                 files: [{
                     expand: true,
-                    cwd: 'src/sass',
+                    cwd: '<%= config.app %>/sass',
                     src: ['*.scss'],
-                    dest: 'dest/css/',
+                    dest: '<%= config.dist %>/css/',
                     ext: '.css'
                 }]
             }
         },
         cssmin: {
-            my_target: {
+            main: {
                 files: [{
                     expand: true,
-                    cwd: 'dest/css/',
+                    cwd: '<%= config.dist %>/css/',
                     src: ['*.css', '!*.min.css'],
-                    dest: 'dest/css/',
+                    dest: '<%= config.dist %>/css/',
                     ext: '.min.css'
                 }]
             },
@@ -66,20 +118,46 @@ module.exports = function(grunt) {
                     'libs/jquery-ui/themes/base/slider.css',
                     'libs/bxslider/jquery.bxslider.css',
                 ],
-                dest: 'dest/css/app-deps.css'
+                dest: '<%= config.dist %>/css/app-deps.css'
 
             }
         },
+        // Add vendor prefixed styles
+        autoprefixer: {
+            options: {
+                browsers: ['> 1%', 'last 2 versions', 'Firefox ESR', 'Opera 12.1']
+            },
+            dist: {
+                files: [{
+                    expand: true,
+                    cwd: '.tmp/styles/',
+                    src: '{,*/}*.css',
+                    dest: '.tmp/styles/'
+                }]
+            }
+        },
+        // Make sure code styles are up to par and there are no obvious mistakes
+        jshint: {
+            options: {
+                jshintrc: '.jshintrc',
+                reporter: require('jshint-stylish')
+            },
+            all: [
+                'gruntfile.js',
+                '<%= config.app %>/js/*.js',
+                '!<%= config.app %>lib/**/*.js'
+            ]
+        },
         concat: {
             options: {
-                seperator: "\n\n",
+                seperator: '\n\n',
                 sourceMap: true,
                 stripeBanners: true,
                 banner: '/*!<%= pkg.name %> - v<%= pkg.version %> - ' + ' <%= grunt.template.today("yyyy-mm-dd") %> */',
             },
             dist: {
-                src: ['src/js/bootstrap/*js'],
-                dest: 'dest/js/bootstrap.js',
+                src: ['<%= config.app %>/js/bootstrap/*js'],
+                dest: '<%= config.dist %>/js/bootstrap.js',
             },
             deps: {
                 src: [
@@ -91,13 +169,13 @@ module.exports = function(grunt) {
                     'libs/jquery-ui/ui/position.js',
                     'libs/jquery-ui/ui/datepicker.js',
                     'libs/jquery-ui/ui/slider.js',
-                    'src/js/jquery-ui-touch.js',
+                    '<%= config.app %>/js/jquery-ui-touch.js',
                     'libs/bxslider/jquery.bxslider.js',
-                    'src/js/script.js',
-                    'src/js/sidebar.js',
-                    'src/js/slider.js',
+                    '<%= config.app %>/js/script.js',
+                    '<%= config.app %>/js/sidebar.js',
+                    '<%= config.app %>/js/slider.js',
                 ],
-                dest: 'dest/js/app-deps.js'
+                dest: '<%= config.dist %>/js/app-deps.js'
             },
             // move: {
             //     src: ['libs/angularjs/angular.min.js.map'],
@@ -108,23 +186,26 @@ module.exports = function(grunt) {
             options: {
                 manage: false,
                 sourceMap: true,
-                sourceMapIncludeSources: true,
-                /*For presreve comments i minified file*/
-                preserveComments: 'all'
+                //sourceMapIncludeSources: true,
+                // sourceMapName: '<%= config.dist %>/js/sourcemap/sourcemap.map',
+                // sourceMapIn: '<%= config.dist %>/js/sourcemap/sourcemap.map'
+
+                /*For presreve comments i minified file
+                preserveComments: 'all'*/
             },
             // Following task will take all the js in "dest/js" folder and combine in one minifyed js
-            minify_all_js: {
+            minifyalljs: {
                 files: {
-                    'dest/js/app.min.js': ['dest/js/bootstrap.js', 'dest/js/app-deps.js']
+                    '<%= config.dist %>/js/app.min.js': ['<%= config.dist %>/js/bootstrap.js', '<%= config.dist %>/js/app-deps.js']
                 }
             },
             /* Following task make all js minified but not combine in one file
             my_target2: {
                 files: [{
                         expand: true,
-                        cwd: 'dest/js/',
+                        cwd: '<%= config.dist %>/js/',
                         src: ['*.js', '*.min.js'],
-                        dest: 'dest/js/',
+                        dest: '<%= config.dist %>/js/',
                         ext: '.min.js'
                     }]
                                      This is for Combineing files 
@@ -135,8 +216,8 @@ module.exports = function(grunt) {
 
         webfont: {
             icons: {
-                src: 'src/icons/*.svg',
-                dest: 'dest/icon-font',
+                src: '<%= config.app %>/icons/*.svg',
+                dest: '<%= config.dist %>/icon-font',
                 options: {
                     syntax: 'bem',
                     templateOptions: {
@@ -150,14 +231,18 @@ module.exports = function(grunt) {
         browserSync: {
             dev: {
                 bsFiles: {
-                    src: ['dest/css/*.css', 'dest/*.html']
+                    src: ['<%= config.dist %>/css/*.css', '<%= config.dist %>/*.html']
                 },
                 options: {
                     watchTask: true,
-                    server: './dest'
+                    server: './<%= config.dist %>'
                 }
             }
         },
+
     });
     grunt.registerTask('default', ['browserSync', 'watch']);
+
+    //MAKE BUILD
+    grunt.registerTask('build', ['newer:copy:main', 'sass:main', 'webfont', 'cssmin:main']);
 };

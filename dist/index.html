@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="images/favicon.ico">
+    <title>Trip Navigatore1</title>
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="icon-font/icons.css" rel="stylesheet">
+    <link href="css/app-deps.css" rel="stylesheet">
+    <!-- Bootstrap theme -->
+    <!-- <link href="css/bootstrap-theme.css" rel="stylesheet"> -->
+    <!-- Custom styles for this template -->
+    <!-- <link href="theme.css" rel="stylesheet"> -->
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <!--<script src="js/ie-emulation-modes-warning.js"></script> -->
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <!--<script src="js/ie10-viewport-bug-workaround.js"></script> -->
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body role="document">
+    <!-- top-contact-bar -->
+    <!-- top-header-bar -->
+    <div class="top-header">
+    </div>
+    <!-- Fixed navbar -->
+    <div class="navbar navbar-default" role="navigation">
+        <div class="top-header-contact">
+            <div class="container">
+                <a href=""><i class="glyphicon glyphicon-earphone"></i>+91 123456789</a>
+                <a href=""><i class="glyphicon glyphicon-envelope"></i>info@tripnavigator.com</a>
+            </div>
+        </div>
+        <div class="container text-right">
+            <span class="main-logo"><a class="" href="#"><img src="images/main-logo.png" /></a></span>
+            <div class="log-reg">
+                <button type="button" class="btn btn-sm btn-primary">REGISTER</button>
+                <button type="button" class="btn btn-sm btn-info">LOGIN</button>
+            </div>
+        </div>
+    </div>
+    <!-- -->
+    <div id="selectors-wrapper">
+        <div class="selectors-close"></div>
+        <div id="selectors-container">
+        </div>
+    </div>
+    <!-- -->
+    <!-- main search -->
+    <div id="main-cont" class="main-bg">
+        <div class="filter-container ">
+            <!-- budget filter -->
+            <div class="col-md-2 col-sm-4">
+                <div class="filter f-popup " id="budget">
+                    <!-- RANGE POPUP -->
+                    <div class="popup">
+                        <div id="slider-vertical" style="height:100%;    margin: 0 auto;"></div>
+                    </div>
+                    <div>
+                        <input type="text" id="amount" readonly style="border:0; color:#f6931f; font-weight:bold; width:100%;text-align:center;    background: transparent;">
+                    </div>
+                    <div class="filter-icon"><i class="tn-3x tn-icon tn-rupee"></i></div>
+                    <div class="filter-arrow"><i class="tn-icon tn-direction306"></i></div>
+                    <div>BUDGET</div>
+                </div>
+            </div>
+            <!-- region filter -->
+            <div class="col-md-2 col-sm-4">
+                <div class="filter f-popup" id="region-sec">
+                    <div class="popup">
+                        <div id="region">
+                            <span class="next-btn sld-btn"><i class="tn-icon tn-direction309"></i></span>
+                            <div class="region-container">
+                                <div><span class="region-item">Region-1</span></div>
+                                <div><span class="region-item">Region-2</span></div>
+                                <div><span class="region-item">Region-3</span></div>
+                                <div><span class="region-item">Region-4</span></div>
+                                <div><span class="region-item">Region-5</span></div>
+                                <div><span class="region-item">Region-6</span></div>
+                                <div><span class="region-item">Region-7</span></div>
+                                <div><span class="region-item ">Region-8</span></div>
+                                <div><span class="region-item ">Region-9</span></div>
+                                <div><span class="region-item ">Region-10</span></div>
+                                <div><span class="region-item ">Region-11</span></div>
+                                <div><span class="region-item ">Region-12</span></div>
+                                <div><span class="region-item ">Region-13</span></div>
+                                <div><span class="region-item ">Region-14</span></div>
+                                <div><span class="region-item ">Region-15</span></div>
+                                <div><span class="region-item ">Region-16</span></div>
+                                <div><span class="region-item ">Region-17</span></div>
+                                <div><span class="region-item ">Region-18</span></div>
+                                <div><span class="region-item ">Region-19</span></div>
+                                <div><span class="region-item ">Region-10</span></div>
+                            </div>
+                            <span class="prev-btn sld-btn"><i class="tn-icon tn-direction306"></i></span>
+                        </div>
+                    </div>
+                    <div>
+                        <span id="slected-region" style="border:0; color:#f6931f; font-weight:bold;width:100%;text-align:center;"></span>
+                    </div>
+                    <div class="filter-icon"><i class="tn-3x tn-icon tn-location"></i></div>
+                    <div class="filter-arrow"><i class="tn-icon tn-direction306"></i></div>
+                    <div>REGION</div>
+                </div>
+            </div>
+            <!-- THEME filter -->
+            <div class="col-md-2 col-sm-4">
+                <div class="filter f-popup " id="theme-sec">
+                    <div class="popup">
+                        <div id="theme">
+                            <span class="next-btn sld-btn"><i class="tn-icon tn-direction309"></i></span>
+                            <div class="theme-container">
+                                <div><span class="theme-item ">THEME-1</span></div>
+                                <div><span class="theme-item ">THEME-2</span></div>
+                                <div><span class="theme-item ">THEME-3</span></div>
+                                <div><span class="theme-item ">THEME-4</span></div>
+                                <div><span class="theme-item ">THEME-5</span></div>
+                                <div><span class="theme-item ">THEME-6</span></div>
+                                <div><span class="theme-item ">THEME-7</span></div>
+                                <div><span class="theme-item ">THEME-8</span></div>
+                                <div><span class="theme-item ">THEME-9</span></div>
+                                <div><span class="theme-item ">THEME-10</span></div>
+                                <div><span class="theme-item ">THEME-11</span></div>
+                                <div><span class="theme-item ">THEME-12</span></div>
+                                <div><span class="theme-item ">THEME-13</span></div>
+                                <div><span class="theme-item ">THEME-14</span></div>
+                                <div><span class="theme-item ">THEME-15</span></div>
+                                <div><span class="theme-item ">THEME-16</span></div>
+                                <div><span class="theme-item ">THEME-17</span></div>
+                                <div><span class="theme-item ">THEME-18</span></div>
+                                <div><span class="theme-item ">THEME-19</span></div>
+                                <div><span class="theme-item ">THEME-10</span></div>
+                            </div>
+                            <span class="prev-btn sld-btn"><i class="tn-icon tn-direction306"></i></span>
+                        </div>
+                    </div>
+                    <div>
+                        <span id="slected-theme" style="border:0; color:#f6931f; font-weight:bold;width:100%;text-align:center;"></span>
+                    </div>
+                    <div class="filter-icon"><i class="tn-3x tn-icon tn-alphabet"></i></div>
+                    <div class="filter-arrow"><i class="tn-icon tn-direction306"></i></div>
+                    <div>THEME</div>
+                </div>
+            </div>
+            <!-- theme filter -->
+            <div class="col-md-2 col-sm-4">
+                <div class="filter f-popup " id="date">
+                    <div class="popup">
+                        <input type="hidden" id="date-input" />
+                        <div id="datepicker"></div>
+                    </div>
+                    <div class="filter-icon"><i class="tn-3x tn-icon tn-calendar"></i></div>
+                    <div class="filter-arrow"><i class="tn-icon tn-direction306"></i></div>
+                    <div>DATE</div>
+                </div>
+            </div>
+            <!-- people filter -->
+            <div class="col-md-2 col-sm-4">
+                <div class="filter f-popup " id="people">
+                    <div class="popup">
+                        <div id="people">
+                            <div>
+                                <span class="peoples"><!-- <i class="tn-2x tn-icon tn-profile">2</i><br/> -->
+                                For 2 Peopls</span>
+                            </div>
+                            <div><span class="people-item"> For  Peopls</span></div>
+                            <div><span class="people-item">For 8 Peopls</span></div>
+                            <div><span class="people-item">For 12 Peopls</span></div>
+                            <div><span class="people-item">For 18 Peopls</span></div>
+                            <div><span class="people-item">More than 18 Peopls</span></div>
+                            <div>
+                                <input class="text-center" type="text" placeholder="Add manually" />
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <span id="slected-people" style="border:0; color:#f6931f; font-weight:bold;width:100%;text-align:center;"></span>
+                    </div>
+                    <div class="filter-icon"><i class="tn-3x tn-icon tn-profile"></i></div>
+                    <div class="filter-arrow"><i class="tn-icon tn-direction306"></i></div>
+                    <div>PEOPLE</div>
+                </div>
+            </div>
+            <!-- search-button filter -->
+            <div class="col-md-2 col-sm-4">
+                <div class="filter" id="search">
+                    <a href="client.html">
+                        <div class="filter-icon"><i class="tn-3x tn-icon tn-search"></i></div>
+                        <div class="filter-arrow"><i class="tn-icon "></i></div>
+                        <div>SEARCH</div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="navbar navbar-default sticky-nav">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="sticky-logo" href="#"><img src="images/main-logo.png" /></a>
+            </div>
+            <div class="navbar-collapse collapse navbar-right">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="index.html">HOME</a></li>
+                    <li><a href="about.html">ABOUT US</a></li>
+                    <li><a href="client.html">CLIENT</a></li>
+                    <li><a href="#partners">PARTNERS</a></li>
+                    <li class="dropdown img-circle">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><img style="width:25px;" src="images/partner.png" alt=""></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Profile</a></li>
+                            <li><a href="#">Logout</a></li>
+                            <li><a href="#">Setting</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <!--/.nav-collapse -->
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 about">
+                <h3 class="">ABOUT US</h3>
+                <p>Trip Navigator Corporate Travel solutions has been created with a vision to simplify Corporate Travel & Event management by integrating all MICE services & offering them online.</p>
+                <p> The portal gives you the opportunity to plan & execute your next initiative online in the most optimum manner by offering you various options to choose from should it be an offsite, sales incentive trip, annual meeting, Event, etc. A wide range of hotels across the country to choose from. With an excellent search engine to help you shortlist the hotel of you choice basis your requirement, budget & location of choice, and a chance to post & review client feedback to assist in making the right choices.</p>
+                <p> Merchandise options across the country for you to select, should it be reward options or takeaway gifts. Browse through various options & have a hassle free experience.</p>
+                <p> A wide range of Team building options in the destination of your choice through carefully selected partners who understand your need and offer you the best team building solutions. These could be outdoors or Indoor, training based or physical, motivational speakers & lots more to choose from.</p>
+                <p> Event solutions for your Gala dinners, Themed parties, Conference’s, etc, to ensure that you have all the options available at the most reasonable prices. A wide range Artist from dance troupes, MC’s, illusionists, local performances & stunning acts across the country, to choose from. </p>
+                <p>All this & much more at one place. The one stop shop for your Travel & Event planning.
+                </p>
+            </div>
+        </div>
+        <div class="row" id="partners">
+            <div class="col-md-4 col-sm-4">
+                <figure class="text-center"><img class="img-responsive" src="images/partner.png" /></figure>
+                <div class="part-name">
+                    <h3 class="text-center">Gavin DCosta</h3>
+                </div>
+                <div class="details">
+                    <p>Gavin DCosta is a Post Graduate in Business Management with specialization in Marketing and has worked with various Multinational Banks for almost 13 years. Before starting Trip Navigator Gavin was Asst Vice President with the Royal Bank Of Scotland heading the Retail Risk Unit for the Western Region. Love for Travelling combined with his Operational expertise & ability to set-up & manage large teams has helped in strengthening Trip Navigators Operational processes, inhouse teams & culture of innovation which has resulted in establishing the company in such a short span of time.
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-4">
+                <figure class="text-center"><img class="img-responsive img-circle" src="images/partner-2.png" /></figure>
+                <div class="part-name">
+                    <h3 class="text-center">Abhishek Gupta</h3></div>
+                <div class="details">
+                    <p>Abhishek Gupta is a Post graduate in Business Management and has worked for almost 10 years in various industries like FMCG, Consumer Durables, Banking, Media. Before starting Trip Navigator Abhisek was heading the Retail Sales and Regional Corporate Business for West Zone in Fever 104 FM (Hindustan Times). Abhisek is a highly dynamic & approachable person with key eye on detail. His subject Knowledge ensures enriched value addition to the company & its clientele in terms of efficiency & effectiveness.
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-4">
+                <figure class="text-center"><img class="img-responsive img-circle" src="images/partner-3.png" /></figure>
+                <div class="part-name">
+                    <h3 class="text-center">Litesh N Jethani</h3></div>
+                <div class="details">
+                    <p>Litesh N Jethani extremely passionate about brand building and business enhancement, holds a masters degree in Brand management from Mudra Institute of Communications, and has spent more than 10 years in the industry with various media houses. His last assignment was as a Marketing Head (West), with Red FM. Litesh brings the events management and on-ground handling expertise to the company, which helps assisting the clients who have such requirements.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="container hidden-xs">
+                <div class="sec-heading">
+                    <h2 class="text-center">We are all connected by a love for Travel</h2>
+                </div>
+                <div class="cardWrapper">
+                    <div class="row">
+                        <div class="col-lg-3 col-md-3 col-sm-6 cardContainer">
+                            <div class="card">
+                                <div class="front">
+                                    <div class="text-center "><i class="tn-5x tn-icon tn-alphabet"></i></div>
+                                    <h4>Commitment </h4>
+                                    <p>(We consistently Deliver)</p>
+                                </div>
+                                <div class="back">
+                                    <div class="content">
+                                        <p class="description">
+                                            At Trip Navigator we are committed towards providing seamless service to our clients. We synergize our strengths & competencies in various areas and provide a single window to cater to all our clients requirements. We are also very committed to effectively utilize our domain knowledge & expertise to deliver high quality travel solutions based on specific requirements of our clients.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-3 col-sm-6 cardContainer">
+                            <div class="card">
+                                <div class="front">
+                                    <div class="text-center "><i class="tn-5x tn-icon tn-alphabet"></i></div>
+                                    <h4>Integrity </h4>
+                                    <p>(We are Trustworthy)</p>
+                                </div>
+                                <div class="back">
+                                    <div class="content">
+                                        <p class="description">
+                                            Honesty & Trust are extremely important components of our performance. We strive to provide solutions with sincerity & trust, because we believe in the welfare of our clients. We place the integrity of travel industry and interests of our clients above our own personal interests.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-3 col-sm-6 cardContainer">
+                            <div class="card">
+                                <div class="front">
+                                    <div class="text-center "><i class="tn-5x tn-icon tn-alphabet"></i></div>
+                                    <h4>Enrichment </h4>
+                                    <p>(We keep raising the bar)</p>
+                                </div>
+                                <div class="back">
+                                    <div class="content">
+                                        <p class="description">
+                                            At Trip Navigator we believe in providing the best travel values to our clients. Every member of Trip Navigator is an entrepreneur who contributes to the overall success of the business constantly developing innovative travel solutions. We therefore strongly believe in continuous learning to adapt to the dynamic needs of our clients & promote flexibility in our organization to constantly excel ourselves. We grow as members & clients grow.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-3 col-sm-6 cardContainer">
+                            <div class="card">
+                                <div class="front">
+                                    <div class="text-center "><i class="tn-5x tn-icon tn-alphabet"></i></div>
+                                    <h4>Partnership</h4>
+                                    <p>(We succeed together)</p>
+                                </div>
+                                <div class="back">
+                                    <div class="content">
+                                        <p class="description">
+                                            Every member of Trip Navigator is an integral part of the company & responsible for organizational success. We place great emphasis on our longstanding relationships with all our stakeholders by striving to offer them a delightful business experience as our partners. We strongly respect our clients value systems & integrate them with ours while providing services to each individual business.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid" style="padding:0px;">
+        <div class="row" id="col-pad">
+            <div class="col-md-6" id="travel">
+                <!-- <h3 class="text-center">MISSION</h3> -->
+                <figure>
+                    <img alt="nerd girl" src="images/mission.jpg">
+                    <figcaption>
+                        <h3>MISSION</h3>
+                        <p>In today's market, outstanding service, quality and value for our clients alone is simply not enough. To strive for an integrated and proactive approach & seek new opportunities to make Business/Leisure travel more efficient, effective and accommodating is our core Mission.At Trip Navigator Private Ltd, we share our knowledge, expertise and enthusiasm to ensure that we lways meet our client's ambitions. These are the things that make…A True Travel Partnership</p>
+                        <p><a href="#">Read More</a></p>
+                    </figcaption>
+                </figure>
+            </div>
+            <div class="col-md-6" id="travel">
+                <!-- <h3 class="text-center">VISION</h3> -->
+                <figure>
+                    <img alt="nerd girl" src="images/vision.jpg">
+                    <figcaption>
+                        <h3>VISION</h3>
+                        <p>To become the most respected Corporate Travel Services & Event Company globally, having a leadership position in market share through extensive focus on innovation, service excellence, value for money, customer satisfaction & above all - employee satisfaction, since we believe that only a happy employee can create a happy customer. Our Values- Our operations are guided by our Four main values</p>
+                        <p><a href="#">Read More</a></p>
+                    </figcaption>
+                </figure>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="container">
+                <div class="sec-heading">
+                    <h2 class="text-center">You Might be Intrested In</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="partners">
+        <div class="">
+            <div class="sec-heading">
+                <div class="partner-slider">
+                    <div class="slide"><img src="images/hyatt-logo.png"></div>
+                    <div class="slide"><img src="images/leela-logo.png"></div>
+                    <div class="slide"><img src="images/taj-logo.png"></div>
+                    <div class="slide"><img src="images/hyatt-logo-2.png"></div>
+                    <div class="slide"><img src="images/leela-logo-2.png"></div>
+                    <div class="slide"><img src="images/taj-logo-2.png"></div>
+                    <div class="slide"><img src="images/hyatt-logo.png"></div>
+                    <div class="slide"><img src="images/leela-logo.png"></div>
+                    <div class="slide"><img src="images/taj-logo.png"></div>
+                    <div class="slide"><img src="images/hyatt-logo-2.png"></div>
+                    <div class="slide"><img src="images/leela-logo-2.png"></div>
+                    <div class="slide"><img src="images/taj-logo-2.png"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /container -->
+    <footer class="footer-inverse">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-6 col-sm-4">
+                    <a class="" href="#"><img src="images/main-logo-white.png" /></a>
+                </div>
+                <div class="col-md-6 col-sm-8">
+                    <div class="social text-right">
+                        <a href="www.facebook.com"><i class="tn-3x tn-icon tn-fb"></i></a>
+                        <a href="www.tweeter.com"><i class="tn-3x tn-icon tn-tweet"></i></a>
+                        <a href="www.tweeter.com"><i class="tn-3x tn-icon tn-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="row site-map">
+                <div class="col-md-4 col-sm-4">
+                    <ul class="sitemap-ul">
+                        <li><a href="">About</a></li>
+                        <li><a href="">Blog</a></li>
+                        <li><a href="">FaQ</a></li>
+                        <li><a href="">Careers</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 col-sm-4">
+                    <ul class="sitemap-ul">
+                        <li><a href="">Contact Us</a></li>
+                        <li><a href="">T & C</a></li>
+                        <li><a href="">Security</a></li>
+                        <li><a href="">Privacy Policy</a></li>
+                        <li><a href="">ABOUT</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 col-sm-4">
+                    <ul class="sitemap-ul">
+                        <li><a href="">Upcoming Sales</a></li>
+                        <li><a href="">Personal Travel Planning</a></li>
+                        <li><a href="">FAQ</a></li>
+                        <li><a href="">Tours</a></li>
+                        <li><a href="">Journeys</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="js/app.min.js">
+    </script>
+</body>
+
+</html>
