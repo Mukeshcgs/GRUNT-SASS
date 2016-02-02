@@ -58,7 +58,7 @@
             
             // FILTER
             .filter-container {
-                padding-top: 30%;
+                padding-top: 15%;
                 .filter {
                     @media (min-width: $screen-sm-min) {
                         margin-bottom: 20px;
@@ -72,11 +72,13 @@
                     display: block;
                     padding: 25px;
                     &:hover {
-                        background: $brand-primary;
-                        color: #ffffff;
-                        cursor: pointer;
+                        //background: $brand-primary;
+                        //color: $brand-primary;
+                        //cursor: pointer;
                         .filter-icon {
-                            color: #ffffff;
+                            i {
+                                color: $brand-primary!important;
+                            }
                         }
                     }
                     .filter-icon {
@@ -84,6 +86,9 @@
                     }
                     .filter-arrow {
                         padding: 10px;
+                    }
+                    input,select {
+                        margin-top: 10px;
                     }
                 }
                 #search {

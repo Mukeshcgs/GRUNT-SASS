@@ -44,164 +44,176 @@
         <div class="container text-right">
             <span class="main-logo"><a class="" href="#"><img src="images/main-logo.png" /></a></span>
             <div class="log-reg">
-                <button type="button" class="btn btn-sm btn-primary">REGISTER</button>
-                <button type="button" class="btn btn-sm btn-info">LOGIN</button>
+                <button type="button" class="btn btn-sm btn-primary" data-toggle="modal" data-target="#register">
+                    REGISTER
+                </button>
+                <!-- <a type="button" href="register.html" class="btn btn-sm btn-primary">REGISTER</a> -->
+                <a type="button" class="btn btn-sm btn-info">LOGIN</a>
             </div>
         </div>
     </div>
-    <!-- -->
-    <div id="selectors-wrapper">
-        <div class="selectors-close"></div>
-        <div id="selectors-container">
-        </div>
-    </div>
-    <!-- -->
     <!-- main search -->
     <div id="main-cont" class="main-bg">
-        <div class="filter-container ">
-            <!-- budget filter -->
+        <!-- INLINE SEARCH -->
+        <div class="container">
+            <div class="row" id="searchbar">
+                <div class="col-md-12" id="">
+                    <h1 class="text-m ">TRIP NAVIGATORE</h1>
+                </div>
+                <div class="col-md-12" id="searchbar-form">
+                    <form class="row " role="form">
+                        <div class="col-md-2 col-sm-4">
+                            <div class="form-group">
+                                <label class="" for="">Budget</label>
+                                <div class="input-group">
+                                    <span class="input-group-addon"><input type="text" class=" form-control" id="min-budget" placeholder="Min"></span>
+                                    <span class="input-group-addon"><input type="text" class=" form-control" id="min-budget" placeholder="Max"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- -->
+                        <div class="col-md-2 col-sm-4">
+                            <div class="form-group">
+                                <label class="" for="">Region</label>
+                                <div class="">
+                                    <select class=" form-control">
+                                        <option value="">01</option>
+                                        <option value="">01</option>
+                                        <option value="">01</option>
+                                        <option value="">01</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- -->
+                        <div class="col-md-2 col-sm-4">
+                            <div class="form-group">
+                                <label class="" for="">Theme</label>
+                                <div class="">
+                                    <select class=" form-control">
+                                        <option value="">01</option>
+                                        <option value="">01</option>
+                                        <option value="">01</option>
+                                        <option value="">01</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- -->
+                        <div class="col-md-2 col-sm-4">
+                            <div class="form-group">
+                                <label class="" for="">Date</label>
+                                <div class="input-group">
+                                    <span class="input-group-addon"><input type="text" class=" form-control" id="min-budget" placeholder="From"></span>
+                                    <span class="input-group-addon"><input type="text" class=" form-control" id="min-budget" placeholder="To"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- -->
+                        <div class="col-md-2 col-sm-4">
+                            <div class="form-group">
+                                <label class="" for="">People</label>
+                                <div class="">
+                                    <select class=" form-control">
+                                        <option value="">01</option>
+                                        <option value="">01</option>
+                                        <option value="">01</option>
+                                        <option value="">01</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- -->
+                        <div class="col-md-2 col-sm-4">
+                            <div class="form-group">
+                                <label class="" for="">People</label>
+                                <div class="">
+                                    <button type="submit" class=" btn-block btn btn-info">SEARCH</button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!-- INLINE SEARCH -->
+        <!-- <form class="filter-container ">
+            budget filter
             <div class="col-md-2 col-sm-4">
                 <div class="filter f-popup " id="budget">
-                    <!-- RANGE POPUP -->
+                    RANGE POPUP
                     <div class="popup">
                         <div id="slider-vertical" style="height:100%;    margin: 0 auto;"></div>
                     </div>
-                    <div>
-                        <input type="text" id="amount" readonly style="border:0; color:#f6931f; font-weight:bold; width:100%;text-align:center;    background: transparent;">
+                    <div class="filter-icon"><i class="tn-3x tn-icon tn-rupee1"></i></div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="" placeholder="Min">
+                        <input type="text" class="form-control" id="" placeholder="Max">
                     </div>
-                    <div class="filter-icon"><i class="tn-3x tn-icon tn-rupee"></i></div>
-                    <div class="filter-arrow"><i class="tn-icon tn-direction306"></i></div>
                     <div>BUDGET</div>
                 </div>
             </div>
-            <!-- region filter -->
+            region filter
             <div class="col-md-2 col-sm-4">
                 <div class="filter f-popup" id="region-sec">
-                    <div class="popup">
-                        <div id="region">
-                            <span class="next-btn sld-btn"><i class="tn-icon tn-direction309"></i></span>
-                            <div class="region-container">
-                                <div><span class="region-item">Region-1</span></div>
-                                <div><span class="region-item">Region-2</span></div>
-                                <div><span class="region-item">Region-3</span></div>
-                                <div><span class="region-item">Region-4</span></div>
-                                <div><span class="region-item">Region-5</span></div>
-                                <div><span class="region-item">Region-6</span></div>
-                                <div><span class="region-item">Region-7</span></div>
-                                <div><span class="region-item ">Region-8</span></div>
-                                <div><span class="region-item ">Region-9</span></div>
-                                <div><span class="region-item ">Region-10</span></div>
-                                <div><span class="region-item ">Region-11</span></div>
-                                <div><span class="region-item ">Region-12</span></div>
-                                <div><span class="region-item ">Region-13</span></div>
-                                <div><span class="region-item ">Region-14</span></div>
-                                <div><span class="region-item ">Region-15</span></div>
-                                <div><span class="region-item ">Region-16</span></div>
-                                <div><span class="region-item ">Region-17</span></div>
-                                <div><span class="region-item ">Region-18</span></div>
-                                <div><span class="region-item ">Region-19</span></div>
-                                <div><span class="region-item ">Region-10</span></div>
-                            </div>
-                            <span class="prev-btn sld-btn"><i class="tn-icon tn-direction306"></i></span>
-                        </div>
-                    </div>
                     <div>
                         <span id="slected-region" style="border:0; color:#f6931f; font-weight:bold;width:100%;text-align:center;"></span>
                     </div>
-                    <div class="filter-icon"><i class="tn-3x tn-icon tn-location"></i></div>
-                    <div class="filter-arrow"><i class="tn-icon tn-direction306"></i></div>
+                    <div class="filter-icon"><i class="tn-3x tn-icon tn-map25"></i></div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="" placeholder="Region">
+                    </div>
                     <div>REGION</div>
                 </div>
             </div>
-            <!-- THEME filter -->
+            THEME filter
             <div class="col-md-2 col-sm-4">
                 <div class="filter f-popup " id="theme-sec">
-                    <div class="popup">
-                        <div id="theme">
-                            <span class="next-btn sld-btn"><i class="tn-icon tn-direction309"></i></span>
-                            <div class="theme-container">
-                                <div><span class="theme-item ">THEME-1</span></div>
-                                <div><span class="theme-item ">THEME-2</span></div>
-                                <div><span class="theme-item ">THEME-3</span></div>
-                                <div><span class="theme-item ">THEME-4</span></div>
-                                <div><span class="theme-item ">THEME-5</span></div>
-                                <div><span class="theme-item ">THEME-6</span></div>
-                                <div><span class="theme-item ">THEME-7</span></div>
-                                <div><span class="theme-item ">THEME-8</span></div>
-                                <div><span class="theme-item ">THEME-9</span></div>
-                                <div><span class="theme-item ">THEME-10</span></div>
-                                <div><span class="theme-item ">THEME-11</span></div>
-                                <div><span class="theme-item ">THEME-12</span></div>
-                                <div><span class="theme-item ">THEME-13</span></div>
-                                <div><span class="theme-item ">THEME-14</span></div>
-                                <div><span class="theme-item ">THEME-15</span></div>
-                                <div><span class="theme-item ">THEME-16</span></div>
-                                <div><span class="theme-item ">THEME-17</span></div>
-                                <div><span class="theme-item ">THEME-18</span></div>
-                                <div><span class="theme-item ">THEME-19</span></div>
-                                <div><span class="theme-item ">THEME-10</span></div>
-                            </div>
-                            <span class="prev-btn sld-btn"><i class="tn-icon tn-direction306"></i></span>
-                        </div>
-                    </div>
                     <div>
                         <span id="slected-theme" style="border:0; color:#f6931f; font-weight:bold;width:100%;text-align:center;"></span>
                     </div>
-                    <div class="filter-icon"><i class="tn-3x tn-icon tn-alphabet"></i></div>
-                    <div class="filter-arrow"><i class="tn-icon tn-direction306"></i></div>
+                    <div class="filter-icon"><i class="tn-3x tn-icon tn-map25"></i></div>
+                    <div class="form-group">
+                        <select class="form-control">
+                            <option value="">01</option>
+                            <option value="">01</option>
+                            <option value="">01</option>
+                            <option value="">01</option>
+                        </select>
+                    </div>
                     <div>THEME</div>
                 </div>
             </div>
-            <!-- theme filter -->
+            theme filter
             <div class="col-md-2 col-sm-4">
                 <div class="filter f-popup " id="date">
-                    <div class="popup">
-                        <input type="hidden" id="date-input" />
-                        <div id="datepicker"></div>
-                    </div>
-                    <div class="filter-icon"><i class="tn-3x tn-icon tn-calendar"></i></div>
+                    <div class="filter-icon"><i class="tn-3x tn-icon tn-calendar52"></i></div>
                     <div class="filter-arrow"><i class="tn-icon tn-direction306"></i></div>
                     <div>DATE</div>
                 </div>
             </div>
-            <!-- people filter -->
+            people filter
             <div class="col-md-2 col-sm-4">
                 <div class="filter f-popup " id="people">
-                    <div class="popup">
-                        <div id="people">
-                            <div>
-                                <span class="peoples"><!-- <i class="tn-2x tn-icon tn-profile">2</i><br/> -->
-                                For 2 Peopls</span>
-                            </div>
-                            <div><span class="people-item"> For  Peopls</span></div>
-                            <div><span class="people-item">For 8 Peopls</span></div>
-                            <div><span class="people-item">For 12 Peopls</span></div>
-                            <div><span class="people-item">For 18 Peopls</span></div>
-                            <div><span class="people-item">More than 18 Peopls</span></div>
-                            <div>
-                                <input class="text-center" type="text" placeholder="Add manually" />
-                            </div>
-                        </div>
-                    </div>
                     <div>
                         <span id="slected-people" style="border:0; color:#f6931f; font-weight:bold;width:100%;text-align:center;"></span>
                     </div>
-                    <div class="filter-icon"><i class="tn-3x tn-icon tn-profile"></i></div>
+                    <div class="filter-icon"><i class="tn-3x tn-icon tn-group41"></i></div>
                     <div class="filter-arrow"><i class="tn-icon tn-direction306"></i></div>
                     <div>PEOPLE</div>
                 </div>
             </div>
-            <!-- search-button filter -->
+            search-button filter
             <div class="col-md-2 col-sm-4">
                 <div class="filter" id="search">
-                    <a href="client.html">
-                        <div class="filter-icon"><i class="tn-3x tn-icon tn-search"></i></div>
+                    <a href="hotels.html">
+                        <div class="filter-icon"><i class="tn-3x tn-icon tn-search19"></i></div>
                         <div class="filter-arrow"><i class="tn-icon "></i></div>
                         <div>SEARCH</div>
                     </a>
                 </div>
             </div>
-        </div>
+        </form> -->
     </div>
     <div class="navbar navbar-default sticky-nav">
         <div class="container">
@@ -451,9 +463,118 @@
             </div>
         </div>
     </footer>
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
+    <!-- Bootstrap core JavaScript ================================================== -->
+    <!-- Modal -->
+    <div class="modal fade" id="register" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="">Register with Trip Navigatore</h4>
+                </div>
+                <div class="modal-body">
+                    <form class="form-horizontal">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="row two-inputs-inline">
+                                    <label class="col-md-4 control-label mid-blue-text">Name <span class="mandatory">*</span>
+                                    </label>
+                                    <div class="col-md-4">
+                                        <div class="form-group">
+                                            <div class="input-group">
+                                                <span class="input-group-addon light-blue-bg"><i class="fa fa-user"></i></span>
+                                                <input type="text" id="" name="" class="form-control" placeholder="First Name">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="form-group">
+                                            <input type="text" id="" name="" class="form-control" placeholder="Last Name">
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- <div class="form-group">
+                                    <label class="col-md-4 control-label mid-blue-text">Last Name <span class="mandatory">*</span>
+                                    </label>
+                                    <div class="col-md-8">
+                                        <input type="text" id="" name="" class="form-control" placeholder="Last Name">
+                                    </div>
+                                </div> -->
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label class="col-md-4 control-label mid-blue-text">Email <span class="mandatory">*</span>
+                                    </label>
+                                    <div class="col-md-8">
+                                        <div class="input-group">
+                                            <span class="input-group-addon light-blue-bg"><i class="fa fa-envelope"></i></span>
+                                            <input type="text" id="" name="" class="form-control" placeholder="Email">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row two-inputs-inline">
+                                    <label class="col-md-4 control-label mid-blue-text">Mobile
+                                    </label>
+                                    <div class="col-md-3">
+                                        <div class="form-group">
+                                            <div class="input-group">
+                                                <span class="input-group-addon light-blue-bg"><i class="gi gi-iphone"></i></span>
+                                                <select id="example-select" name="example-select" class="form-control">
+                                                    <option value="0"></option>
+                                                    <option value="0">+02</option>
+                                                    <option value="0">+03</option>
+                                                    <option value="0">+04</option>
+                                                    <option value="0">+05</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-5">
+                                        <div class="form-group">
+                                            <input type="text" id="" name="" class="form-control" placeholder="Mobile">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label class="col-md-4 control-label mid-blue-text">Password <span class="mandatory">*</span>
+                                    </label>
+                                    <div class="col-md-8">
+                                        <div class="input-group">
+                                            <span class="input-group-addon light-blue-bg"><i class="fa fa-lock"></i></span>
+                                            <input type="text" id="" name="" class="form-control" placeholder="Alphanumeric : 8-12 characters">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-md-4 control-label mid-blue-text">Confirm Password <span class="mandatory">*</span>
+                                    </label>
+                                    <div class="col-md-8">
+                                        <div class="input-group">
+                                            <span class="input-group-addon light-blue-bg"><i class="fa fa-lock"></i></span>
+                                            <input type="text" id="" name="" class="form-control" placeholder="Alphanumeric : 8-12 characters">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-primary">Cancle</button>
+                    <button type="reset" class="btn btn-info">Submit</button>
+                </div>
+            </div>
+        </div>
+    </div>
     <!-- Placed at the end of the document so the pages load faster -->
+    <script src="js/app-deps.js">
+    </script>
     <script src="js/app.min.js">
     </script>
 </body>

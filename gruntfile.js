@@ -71,7 +71,7 @@ module.exports = function(grunt) {
             },
             js: {
                 files: ['<%= config.app %>/js/*.js', 'lib/**/*.js'],
-                tasks: ['jshint', 'concat', 'uglify'],
+                tasks: ['concat', 'uglify'],
                 options: {
                     livereload: true
                 }
@@ -137,17 +137,17 @@ module.exports = function(grunt) {
             }
         },
         // Make sure code styles are up to par and there are no obvious mistakes
-        jshint: {
-            options: {
-                jshintrc: '.jshintrc',
-                reporter: require('jshint-stylish')
-            },
-            all: [
-                'gruntfile.js',
-                '<%= config.app %>/js/*.js',
-                '!<%= config.app %>lib/**/*.js'
-            ]
-        },
+        // jshint: {
+        //     options: {
+        //         jshintrc: '.jshintrc',
+        //         reporter: require('jshint-stylish')
+        //     },
+        //     all: [
+        //         'gruntfile.js',
+        //         '<%= config.app %>/js/*.js',
+        //         '!<%= config.app %>lib/**/*.js'
+        //     ]
+        // },
         concat: {
             options: {
                 seperator: '\n\n',
@@ -174,6 +174,8 @@ module.exports = function(grunt) {
                     '<%= config.app %>/js/script.js',
                     '<%= config.app %>/js/sidebar.js',
                     '<%= config.app %>/js/slider.js',
+                    '<%= config.app %>/js/bootstrap-multiselect.js',
+                    '<%= config.app %>/js/validat.js'
                 ],
                 dest: '<%= config.dist %>/js/app-deps.js'
             },

@@ -1,0 +1,113 @@
+/*      Get Shit Done Color Pattern
+$brand-danger: #ff3b30;
+$brand-info: #2CA8FF;
+$tn-secondery: #e5e5e5;
+$brand-success: #05AE0E;
+$tn-white: #ffffff;
+*/
+
+.step-indicator {
+    border-collapse: separate;
+    display: table;
+    margin-left: 0px;
+    margin-top: 35px;
+    position: relative;
+    table-layout: fixed;
+    vertical-align: middle;
+    li {
+        display: table-cell;
+        float: none;
+        padding: 0;
+        width: 1%;
+        &:before {
+            background-color: $tn-secondery;
+            content: "";
+            display: block;
+            height: 6px;
+            position: relative;
+            top: 21px;
+        }
+        &:first-child {
+            &:before {
+                left: 50%;
+            }
+        }
+        &:last-child {
+            &:before {
+                right: 50%;
+            }
+        }
+    }
+    .active {
+        .step {
+            border-color: $brand-info;
+            color: $brand-info;
+        }
+        .caption {
+            color: $brand-info;
+            a{
+                color: $brand-info;
+            }
+        }
+    }
+    .complete {
+        .step {
+            background: $brand-success;
+            border-color: $brand-success;
+            color: $tn-white;
+            i { 
+                margin-top:5px;
+                color: $tn-white;
+            }
+        }
+        .caption {
+            color: $brand-success;
+            a{
+                color:$brand-success;
+            }
+        }
+    }
+    .incomplete {
+        .step {
+            border-color: $brand-danger;
+            color: $brand-danger;
+        }
+        .caption {
+            color: $brand-danger;
+        }
+    }
+    .active.complete {
+        .step {
+            background: $brand-info;
+            border-color: $brand-info;
+            color: $tn-white;
+        }
+        .caption {
+            color: $brand-info;
+            font-weight: bold;
+        }
+    }
+    .inactive {
+        .caption {
+            color: $tn-secondery;
+        }
+    }
+    .step {
+        background-color: $tn-white;
+        border: 2px solid $tn-secondery;
+        color: $tn-secondery;
+        font-size: 18px;
+        width: 38px;
+        height: 38px;
+        line-height: 36px;
+        border-radius: 18px;
+        margin: 0 auto;
+        position: relative;
+        z-index: 1;
+    }
+    .caption {
+        box-sizing: border-box;
+        color: $tn-secondery;
+        padding: 11px 16px;
+    }
+}

@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="HandheldFriendly" content="true" />
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="images/favicon.ico">
+    <title>Trip Navigatore : Merchandiser</title>
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="icon-font/icons.css" rel="stylesheet">
+    <link href="css/app-deps.css" rel="stylesheet">
+</head>
+
+<body role="document">
+    <div class="navbar navbar-default sticky-nav">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="sticky-logo" href="#"><img src="images/main-logo.png" /></a>
+            </div>
+            <div class="navbar-collapse collapse navbar-right">
+                <ul class="nav navbar-nav">
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="about.html">ABOUT US</a></li>
+                    <li class="active"><a href="client.html">CLIENT</a></li>
+                    <li><a href="#partners">PARTNERS</a></li>
+                    <li class="dropdown img-circle">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><img style="width:25px;" src="images/partner.png" alt=""></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Profile</a></li>
+                            <li><a href="#">Logout</a></li>
+                            <li><a href="#">Setting</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <!--/.nav-collapse -->
+        </div>
+    </div>
+    <div id="page-container" class="sidebar-partial sidebar-visible-lg sidebar-no-animations">
+        <!-- Main Sidebar -->
+        <div id="sidebar">
+            <div class="side-overlay">
+            </div>
+            <div class="side-nav">
+                <form action="">
+                    <div class="side-fltr active">
+                        <div class="side-popup">
+                            <input type="text" id="amount" readonly style="border:0; color:#f6931f; font-weight:bold; width:100%;text-align:center;    background: transparent;">
+                            <div id="rate">
+                                <div id="slider-vertical" style="height:80%; margin: 0 auto;"></div>
+                            </div>
+                            <div class="slide-popup-action"><span id="done"><i class="tn-1x tn-icon tn-rupee"></i></span> <span id="search"><i class="tn-1x tn-icon tn-search"></i></span></div>
+                        </div>
+                        <a href=""><span><i class="tn-2x tn-icon tn-rupee"></i></span>RATE</a>
+                    </div>
+                    <div class="side-fltr">
+                        <div class="side-popup">
+                            <div id="ratting">
+                                <div class="rate-container">
+                                    <div><span><i class="tn-1x tn-icon tn-star"></i></span>
+                                        <span><i class="tn-1x tn-icon tn-star"></i></span>
+                                        <span><i class="tn-1x tn-icon tn-star"></i></span>
+                                        <span><i class="tn-1x tn-icon tn-star"></i></span>
+                                        <span><i class="tn-1x tn-icon tn-star"></i></span>
+                                    </div>
+                                    <div><span><i class="tn-1x tn-icon tn-star"></i></span>
+                                        <span><i class="tn-1x tn-icon tn-star"></i></span>
+                                        <span><i class="tn-1x tn-icon tn-star"></i></span>
+                                        <span><i class="tn-1x tn-icon tn-star"></i></span>
+                                        <span><i class="tn-1x tn-icon tn-star"></i></span>
+                                    </div>
+                                    <div><span><i class="tn-1x tn-icon tn-star"></i></span>
+                                        <span><i class="tn-1x tn-icon tn-star"></i></span>
+                                        <span><i class="tn-1x tn-icon tn-star"></i></span>
+                                        <span><i class="tn-1x tn-icon tn-star"></i></span>
+                                        <span><i class="tn-1x tn-icon tn-star"></i></span>
+                                    </div>
+                                    <div><span><i class="tn-1x tn-icon tn-star"></i></span>
+                                        <span><i class="tn-1x tn-icon tn-star"></i></span>
+                                        <span><i class="tn-1x tn-icon tn-star"></i></span>
+                                        <span><i class="tn-1x tn-icon tn-star"></i></span>
+                                        <span><i class="tn-1x tn-icon tn-star"></i></span>
+                                    </div>
+                                    <div><span><i class="tn-1x tn-icon tn-star"></i></span>
+                                        <span><i class="tn-1x tn-icon tn-star"></i></span>
+                                        <span><i class="tn-1x tn-icon tn-star"></i></span>
+                                        <span><i class="tn-1x tn-icon tn-star"></i></span>
+                                        <span><i class="tn-1x tn-icon tn-star"></i></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="slide-popup-action"><span id="done"><i class="tn-1x tn-icon tn-rupee"></i></span> <span id="search"><i class="tn-1x tn-icon tn-search"></i></span></div>
+                        </div>
+                        <a href=""><span><i class="tn-2x tn-icon tn-star"></i></span>RATING</a>
+                    </div>
+                    <div class="side-fltr">
+                        <div class="side-popup">
+                            <div id="ratting">
+                                <div class="rate-container">
+                                    <div><span class="locaton-item">Location-1</span></div>
+                                    <div><span class="locaton-item">Location-2</span></div>
+                                    <div><span class="locaton-item">Location-3</span></div>
+                                    <div><span class="locaton-item">Location-4</span></div>
+                                    <div><span class="locaton-item">Location-5</span></div>
+                                </div>
+                            </div>
+                            <div class="slide-popup-action"><span id="done"><i class="tn-1x tn-icon tn-rupee"></i></span> <span id="search"><i class="tn-1x tn-icon tn-search"></i></span></div>
+                        </div>
+                        <a href=""><span><i class="tn-2x tn-icon tn-location"></i></span>LOCATION</a></div>
+                    <div class="side-fltr">
+                        <div class="side-popup">
+                            <div id="ratting">
+                                <div class="rate-container">
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox"> All
+                                        </label>
+                                    </div>
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox"> Hotels
+                                        </label>
+                                    </div>
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox"> Resorts
+                                        </label>
+                                    </div>
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox"> Beach
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="slide-popup-action"><span id="done"><i class="tn-1x tn-icon tn-rupee"></i></span> <span id="search"><i class="tn-1x tn-icon tn-search"></i></span></div>
+                        </div><a href=""><span><i class="tn-2x tn-icon tn-money"></i></span>TYPE</a></div>
+                    <div class="side-fltr-search">
+                        <a href=""><span><i class="tn-2x tn-icon tn-search"></i></span></a>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!-- Main Container -->
+        <div id="main-container">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <ol class="list-inline text-center step-indicator">
+                            <li class="complete">
+                                <div class="step"><i class="tn-2x tn-icon tn-ok2"></i></div>
+                                <div class="caption hidden-xs hidden-sm"><a href="hotels.html">HOTELS</a></div>
+                            </li>
+                            <li class="complete">
+                                <div class="step"><i class="tn-2x tn-icon tn-ok2"></i></div>
+                                <div class="caption hidden-xs hidden-sm"><a href="merchandiser.html">MERCHANDISER</a></div>
+                            </li>
+                            <li class=" active">
+                                <div class="step">3</div>
+                                <div class="caption hidden-xs hidden-sm"><a href="event-planner.html">EVENT PLANNER</a></div>
+                            </li>
+                            <li class="incomplete">
+                                <div class="step">4</div>
+                                <div class="caption hidden-xs hidden-sm"><a href="rnr.html">RNR</a></div>
+                            </li>
+                            <li class="incomplete">
+                                <div class="step">5</div>
+                                <div class="caption hidden-xs hidden-sm"><a href="banquet.html">BANQUET</a></div>
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+                <hr>
+                <!-- Wizard End -->
+                <div class="row">
+                    <div class="col-md-12">
+                        <h4 class="text-primary">Choose</h4></br>
+                    </div>
+                </div>
+                <div class="row" id="hot-list-cont">
+                    <div class="col-md-3 col-sm-6">
+                        <div class="hot-itm">
+                            <figure>
+                                <img class="img-responsive" src="images/m-1.jpg" alt="">
+                                <div class="thumb-over"><a href="" class="btn btn-info"><i class="tn-2x tn-icon tn-correct"></i></a></div>
+                            </figure>
+                            <div class="hot-dtl">
+                                <div>Product Name </div>
+                                <small><i class="tn-icon tn-location"></i> Location</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="hot-itm">
+                            <figure>
+                                <img class="img-responsive" src="images/m-2.jpg" alt="">
+                                <div class="thumb-over"><a href="" class="btn btn-info">VIEW</a></div>
+                            </figure>
+                            <div class="hot-dtl">
+                                <div>Product Name</div>
+                                <small><i class="tn-icon tn-location"></i> Location</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="hot-itm">
+                            <figure>
+                                <img class="img-responsive" src="images/m-3.jpg" alt="">
+                                <div class="thumb-over"><a href="" class="btn btn-info">VIEW</a></div>
+                            </figure>
+                            <div class="hot-dtl">
+                                <div>Product Name</div>
+                                <small><i class="tn-icon tn-location"></i> Location</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="hot-itm">
+                            <figure class="selected">
+                                <img class="img-responsive" src="images/m-4.jpg" alt="">
+                                <div class="thumb-over"><a href="" class="btn btn-info">VIEW</a></div>
+                            </figure>
+                            <div class="hot-dtl">
+                                <div>Product Name</div>
+                                <small><i class="tn-icon tn-location"></i> Location</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br/>
+                <br/>
+                <div class="row" id="hot-list-cont">
+                    <div class="col-md-3 col-sm-6">
+                        <div class="hot-itm">
+                            <figure>
+                                <img class="img-responsive" src="images/m-5.jpg" alt="">
+                                <div class="thumb-over"><a href="" class="btn btn-info">VIEW</a></div>
+                            </figure>
+                            <div class="hot-dtl">
+                                <div>Product Name</div>
+                                <small><i class="tn-icon tn-location"></i> Location</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="hot-itm">
+                            <figure>
+                                <img class="img-responsive" src="images/m-1.jpg" alt="">
+                                <div class="thumb-over"><a href="" class="btn btn-info">VIEW</a></div>
+                            </figure>
+                            <div class="hot-dtl">
+                                <div>Product Name</div>
+                                <small><i class="tn-icon tn-location"></i> Location</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="hot-itm">
+                            <figure>
+                                <img class="img-responsive" src="images/m-7.jpg" alt="">
+                                <div class="thumb-over"><a href="" class="btn btn-info">VIEW</a></div>
+                            </figure>
+                            <div class="hot-dtl">
+                                <div>Product Name</div>
+                                <small><i class="tn-icon tn-location"></i> Location</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="hot-itm">
+                            <figure>
+                                <img class="img-responsive" src="images/m-8.jpg" alt="">
+                                <div class="thumb-over"><a href="" class="btn btn-info">VIEW</a></div>
+                            </figure>
+                            <div class="hot-dtl">
+                                <div>Product Name</div>
+                                <small><i class="tn-icon tn-location"></i>Location</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br/>
+                <br/>
+                <div class="row" id="hot-list-cont">
+                    <div class="col-md-3 col-sm-6">
+                        <div class="hot-itm">
+                            <figure class="">
+                                <img class="img-responsive" src="images/m-1.jpg" alt="">
+                                <div class="thumb-over"><a href="" class="btn btn-info"><i class="tn-2x tn-icon tn-correct"></i></a></div>
+                            </figure>
+                            <div class="hot-dtl">
+                                <div>Product Name </div>
+                                <small><i class="tn-icon tn-location"></i> Location</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="hot-itm">
+                            <figure>
+                                <img class="img-responsive" src="images/m-2.jpg" alt="">
+                                <div class="thumb-over"><a href="" class="btn btn-info">VIEW</a></div>
+                            </figure>
+                            <div class="hot-dtl">
+                                <div>Product Name</div>
+                                <small><i class="tn-icon tn-location"></i> Location</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="hot-itm">
+                            <figure>
+                                <img class="img-responsive" src="images/m-3.jpg" alt="">
+                                <div class="thumb-over"><a href="" class="btn btn-info">VIEW</a></div>
+                            </figure>
+                            <div class="hot-dtl">
+                                <div>Product Name</div>
+                                <small><i class="tn-icon tn-location"></i> Location</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="hot-itm">
+                            <figure>
+                                <img class="img-responsive" src="images/m-4.jpg" alt="">
+                                <div class="thumb-over"><a href="" class="btn btn-info">VIEW</a></div>
+                            </figure>
+                            <div class="hot-dtl">
+                                <div>Product Name</div>
+                                <small><i class="tn-icon tn-location"></i> Location</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br/>
+                <br/>
+                <div class="row" id="hot-list-cont">
+                    <div class="col-md-3 col-sm-6">
+                        <div class="hot-itm">
+                            <figure>
+                                <img class="img-responsive" src="images/m-5.jpg" alt="">
+                                <div class="thumb-over"><a href="" class="btn btn-info">VIEW</a></div>
+                            </figure>
+                            <div class="hot-dtl">
+                                <div>Product Name</div>
+                                <small><i class="tn-icon tn-location"></i> Location</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="hot-itm">
+                            <figure>
+                                <img class="img-responsive" src="images/m-1.jpg" alt="">
+                                <div class="thumb-over"><a href="" class="btn btn-info">VIEW</a></div>
+                            </figure>
+                            <div class="hot-dtl">
+                                <div>Product Name</div>
+                                <small><i class="tn-icon tn-location"></i> Location</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="hot-itm">
+                            <figure>
+                                <img class="img-responsive" src="images/m-7.jpg" alt="">
+                                <div class="thumb-over"><a href="" class="btn btn-info">VIEW</a></div>
+                            </figure>
+                            <div class="hot-dtl">
+                                <div>Product Name</div>
+                                <small><i class="tn-icon tn-location"></i> Location</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="hot-itm">
+                            <figure>
+                                <img class="img-responsive" src="images/m-8.jpg" alt="">
+                                <div class="thumb-over"><a href="" class="btn btn-info">VIEW</a></div>
+                            </figure>
+                            <div class="hot-dtl">
+                                <div>Product Name</div>
+                                <small><i class="tn-icon tn-location"></i>Location</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br/>
+                <br/>
+                <div class="row add-cont-sbc">
+                    <div class="col-md-4">
+                        <div class="box">
+                            <span><i class="tn-1x tn-icon tn-location"></i></span>
+                            <h4>Address</h4>
+                            <div>
+                                <small>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis doloremque, inventore aspernatur quisquam sed quas!</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="box">
+                            <span><i class="tn-1x tn-icon tn-telephone"></i></span>
+                            <h4>Contact</h4>
+                            <div>
+                                <small><a href="mailto:info@tripnevigatore.com">info@tripnevigatore.com</a></small>
+                                <small>+91 0123456789</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="box">
+                            <span><i class="tn-1x tn-icon tn-envelope"></i></span>
+                            <h4>Subscribe</h4>
+                            <div>
+                                <div class="input-group">
+                                    <input type="text" class="form-control" id="exampleInputAmount" placeholder="xyz@gmail.com">
+                                    <div class="input-group-addon btn btn-sm btn-info">SUBMIT</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <footer class="footer-inverse">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-6 col-sm-4">
+                            <a class="" href="#"><img src="images/main-logo-white.png" /></a>
+                        </div>
+                        <div class="col-md-6 col-sm-8">
+                            <div class="social text-right">
+                                <a href="www.facebook.com"><i class="tn-3x tn-icon tn-fb"></i></a>
+                                <a href="www.tweeter.com"><i class="tn-3x tn-icon tn-tweet"></i></a>
+                                <a href="www.tweeter.com"><i class="tn-3x tn-icon tn-youtube"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row site-map">
+                        <div class="col-md-4 col-sm-4">
+                            <ul class="sitemap-ul">
+                                <li><a href="">About</a></li>
+                                <li><a href="">Blog</a></li>
+                                <li><a href="">FaQ</a></li>
+                                <li><a href="">Careers</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-4 col-sm-4">
+                            <ul class="sitemap-ul">
+                                <li><a href="">Contact Us</a></li>
+                                <li><a href="">T & C</a></li>
+                                <li><a href="">Security</a></li>
+                                <li><a href="">Privacy Policy</a></li>
+                                <li><a href="">ABOUT</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-4 col-sm-4">
+                            <ul class="sitemap-ul">
+                                <li><a href="">Upcoming Sales</a></li>
+                                <li><a href="">Personal Travel Planning</a></li>
+                                <li><a href="">FAQ</a></li>
+                                <li><a href="">Tours</a></li>
+                                <li><a href="">Journeys</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+        <!-- /container -->
+        <!-- Bootstrap core JavaScript
+    ================================================== -->
+        <!-- Placed at the end of the document so the pages load faster -->
+        <script src="js/app.min.js">
+        </script>
+</body>
+
+</html>

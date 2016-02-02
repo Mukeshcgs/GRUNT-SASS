@@ -41,10 +41,20 @@
 @import "bootstrap/responsive-embed";
 @import "bootstrap/wells";
 @import "bootstrap/close";
+//Coustom 
 @import "bootstrap/homepage-search";
+@import "bootstrap/custom/searchbar";
 @import "bootstrap/footer";
 @import "bootstrap/sidebar";
 @import "bootstrap/custom";
+@import "bootstrap/wizard";
+@import "bootstrap/custom/popup";
+//pages
+@import "bootstrap/hotels";
+@import "bootstrap/merchandiser";
+@import "bootstrap/eventplanner";
+@import "bootstrap/rnr";
+@import "bootstrap/banquet";
 // Components w/ JavaScript
 @import "bootstrap/modals";
 @import "bootstrap/tooltip";

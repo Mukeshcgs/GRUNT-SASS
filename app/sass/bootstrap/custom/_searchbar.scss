@@ -1,0 +1,39 @@
+#searchbar {
+    h1{
+        color:$tn-white;
+        font-size:55px;
+        font-weight:bold;
+
+    }
+    margin-top:25%;
+}
+#searchbar-form {
+    background:rgba(0, 0, 0, 0.8);
+    padding: 20px 40px;
+    .form-group{
+      label{
+        color:$tn-white;
+        font-family: "OpenSans-Light-webfont", Helvetica, Arial, sans-serif;
+      }
+      .form-control{
+        border:0px;
+      }
+    }
+    .input-group-addon {
+        width: 50%!important;
+        padding: 0px;
+        font-size: 14px;
+        font-weight: normal;
+        line-height: 1;
+        color: #555555;
+        text-align: left;
+        background-color: #eeeeee;
+        border: 0px solid #ccc;
+        border-radius: 0px;
+    }
+}
+
+.two-inputs-inline .form-group {
+    margin-left: 0px !important;
+    margin-right: 0px !important;
+}
